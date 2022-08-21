@@ -1,0 +1,31 @@
+
+{%load static%}
+<link rel="stylesheet" href="{% static 'pp/css/navbar.css' %}">
+
+
+
+<nav>
+    <ul id="primary-navigation"  class="primary-navigation flex" data-visible="false">
+        <li class="active">
+            <a href="{% url 'pp:index' %}">
+                <span aria-hidden="true">00</span>Home
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span aria-hidden="true">01</span>About
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span aria-hidden="true">02</span> Projects
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span aria-hidden="true">03</span> Experience
+            </a>
+        </li>
+
+    </ul>
+</nav>

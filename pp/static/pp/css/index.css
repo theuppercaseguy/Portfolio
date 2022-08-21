@@ -1,0 +1,37 @@
+:root{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    /* background: black; */
+
+}
+body{
+    background: rgb(187, 173, 173);
+    /* background: url("../images/download.png"); */
+    overflow-x:hidden ;
+}
+.primary-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sr-only{
+    border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important; 
+}
+
+
+.flex{
+    display: flex;
+    gap: var(--gap,1rem);
+}
