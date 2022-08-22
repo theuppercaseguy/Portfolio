@@ -22,6 +22,7 @@
 .primary-navigation a {
   text-decoration: none;
   color: white;
+  font-family: var(--font-family, 'sans-serif');
 }
 
 .primary-navigation a > span[aria-hidden="true"] {
@@ -74,6 +75,9 @@
   .primary-navigation a > span[aria-hidden] {
     display: none;
   }
+  .primary-navigation a:hover{
+    color: black;
+  }
 }
 
 @media (min-width: 35em) {
@@ -81,5 +85,8 @@
     --gap: clamp(1.5rem, 10vw, 10rem);
     padding-block: 2rem;
     padding-inline: clamp(3rem, 10vw, 10rem);
+  }
+  .primary-navigation a:hover{
+    color: black;
   }
 }
