@@ -1,3 +1,9 @@
+:root{
+  --green:#64ffda;
+  /* --grey:#a2a8ae; */
+  /* --grey:#00cdee; */
+  --grey:#ccd6f6;
+}
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -21,7 +27,7 @@
 
 .primary-navigation a {
   text-decoration: none;
-  color: white;
+  color: var(--grey);
   font-family: var(--font-family, 'sans-serif');
 }
 
@@ -74,19 +80,21 @@
 @media (min-width: 35em) and (max-width: 55em) {
   .primary-navigation a > span[aria-hidden] {
     display: none;
+    
   }
   .primary-navigation a:hover{
-    color: black;
+    color: var(--green);
   }
 }
 
 @media (min-width: 35em) {
   .primary-navigation {
     --gap: clamp(1.5rem, 10vw, 10rem);
-    padding-block: 2rem;
-    padding-inline: clamp(3rem, 10vw, 10rem);
+    padding-block: 1.5rem;
+    padding-inline: clamp(3rem, 15vw, 20rem);
+    /* width: 40em; */
   }
   .primary-navigation a:hover{
-    color: black;
+    color: var(--green);
   }
 }

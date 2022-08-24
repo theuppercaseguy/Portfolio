@@ -6,20 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saad Khan PortFolio</title>
-    <link rel="stylesheet" href="{% static 'pp/css/index.css'%}">
+    <link rel="stylesheet" href="{% static 'pp/css/index.css' %}">
 
     <script defer src="{% static 'pp/js/nav-bar.js' %}"></script>
     <script defer src="{% static 'pp/js/particles.js' %}"></script>
-    <script defer src="{% static 'pp/js/app.js' %}"></script>
+    <script  defer src="{% static 'pp/js/app.js' %}"></script>
     
 </head>
 <body>
+    
     <div id="particles-js"></div>
-
+    <div class="scroll-buttons-container">
+        <div class="scroll-butt-1 side-scroll-lines"></div>
+        <div class="scroll-butt-2 side-scroll-lines"></div>
+        <div class="scroll-butt-3 side-scroll-lines"></div>
+        <div class="scroll-butt-4 side-scroll-lines"></div>
+    </div>    
     <div class="" id="root">
 
+
         <header class="primary-header flex border-line header-grid-item" >
-            <div id="header-logo" class="border-line"><h1>logo</h1></div>
+            <div id="header-logo" class="border-line"><a href="#"><h1 class="logo">Saad Khan</h1></a></div>
             
             <button aria-controls="primary-navigation" 
             aria-expanded="false" class="mobile-nav-toggle">
@@ -43,19 +50,18 @@
         
         <main id="main-section" class="border-line">
             <section id="section-home">
-                <div style="transition-delay:100ms;">
-                    <h1>Hi, my name is</h1>
+                <div class="title  border-line">
+                    <h1 class="title-text">SAAD <br> KHAN</h1>
+                    <span class="myname-bottom-first-line"></span>
+                    <span class="myname-bottom-second-line"></span>
+                    <p class="title-below-para">Computer / <br>
+                        Software engineer.</p>
                 </div>
-                <div style="transition-delay:200ms ;">
-                    <h2>Saad Khan</h2>
-                </div>
-                <div style="transition-delay:300ms ;">
-                    <h3>Computer / Software Engineer.</h3>
-                </div>
-                <div style="transition-delay:400ms ;">
-                    <p>I'm a computer engineer specialising in bulding interactivee
-                        systems and websites and occasionally desigining them as well.
-                    </p>
+                
+                <div class="hero-right-side border-line">
+                    <p class="portfolio ">PORTFOLIO</p>
+                    <div class="resume-button"><a href=""><span>resume</span></a></div>
+                    <div class="talk-button resume-button"><a href=""><span>Lets Talk</span></a></div>
                 </div>
             </section>
 
@@ -66,7 +72,9 @@
         </main>
 
         <div class="email-right-side-bar border-line" orientation="right">
-            <a href="mailto:saadan06@gmail.com"><span>saadan06@gmail.com</span></a>
+            <div class="right-bar">
+                <a href="mailto:saadan06@gmail.com"><span>saadan06@gmail.com</span></a>
+            </div>
         </div>
 
 
