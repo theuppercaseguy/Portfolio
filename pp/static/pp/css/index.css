@@ -64,7 +64,7 @@ canvas {
   vertical-align: bottom;
 }
 .border-line{
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 #root{
@@ -93,24 +93,92 @@ canvas {
     top: 10em;
 
 }
-.scroll-buttons-container div a{
-    /* content: ""; */
-    height: 10px;
-    width: 30px;
-    background: #828c96;
-    border-radius: 2px;
-    margin-top: 30px;
-    line-height: 1px;
+.scroll-buttons-container ul{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
 }
-.side-scroll-lines{
-    height: 3px;
-    width: 30px;
-    background: #828c96;
-    border-radius: 2px;
+.scroll-buttons-container ul li{
+    content: "";
+    height: 5px;
+    width: 40px;
+    background-color: #fefefe;
     margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.right-side-btts{
+    /* position: fixed; */
+    /* right: 20px;
+    border: 2px solid #fefefe;
+    border-radius: 100%;
+    padding: 10px; */
+}
+#resume-side-btt{
+    position: fixed;
+    top: 12em;
+    right: 20px;
+    
+    border: 2px solid #fefefe;
+    border-radius: 100%;
+    padding: 10px;
+
+
+    cursor: pointer;
+    color:var(--green);
+    border-color: var(--green);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+}
+
+#resume-side-btt:hover{
+    animation: RR-btts-hover 0.3s ease-out 0s 1 forwards normal;
+    box-shadow: 0 0 10px var(--green),
+    0 0 20px var(--green),
+    0 0 40px var(--green),
+    0 0 80px var(--green),
+    0 0 160px var(--green);
+}
+#lets-talk-side-btt{
+    position: fixed;
+    top: 17.5em;
+    right: 20px;
+    
+    border: 2px solid var(--blue);
+    border-radius: 100%;
+    padding: 10px;
+
+
+    color:var(--blue);
+    cursor: pointer;
+    border-color: var(--blue);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+
+}
+#lets-talk-side-btt:hover{
+    animation: LT-btts-hover 0.3s ease-out 0s 1 forwards normal;
+    box-shadow: 0 0 10px var(--blue),
+    0 0 20px var(--blue),
+    0 0 40px var(--blue),
+    0 0 80px var(--blue),
+    0 0 160px var(--blue);
     
 }
 
+@keyframes RR-btts-hover {
+    100%{
+        background-color:  var(--green);
+        color: black;
+    }
+}
+
+@keyframes LT-btts-hover {
+    100%{
+        background-color:  var(--blue);
+        color: black;
+    }
+}
 #header-logo{
     grid-template-columns: 1 / 1;
     height: 100%;
@@ -221,7 +289,7 @@ a{
     height: calc(100vh - 100px);
     width: 100%;
     display: flex;
-    flex-grow: 1;
+
     justify-content: center;
 }
 .title{
@@ -235,7 +303,7 @@ a{
     /* margin-right: 11%; */
     /* flex-grow: 1; */
     width: fit-content;
-    padding-right: 25%;
+    padding-right: 20%;
     
 }
 .hero-right-side{
@@ -243,6 +311,7 @@ a{
     /* width: 100%; */
     width: fit-content;
     /* border: 2px solid red; */
+    padding-right: 13%;
 }
 .portfolio{
     font-size: 2.4rem;
@@ -255,7 +324,6 @@ a{
     font-weight: bold;
     position:relative;
     top: 5em;
-    left:8%;
 
     animation: right-slide-in 1s ease-out 0s 1 normal forwards;
 }
