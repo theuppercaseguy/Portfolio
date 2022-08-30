@@ -6,7 +6,6 @@
 <!-- <h3>Write a Testimonial</h3> -->
 <section class="testimonials ">
     <div class="writtenT ">
-
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -14,20 +13,25 @@
                         <img src="{% static 'pp/images/quotes.png' %}" alt="err-quote" class="quote">
 
                         <div class="content">
-                            <p>Lo obcaeta impedit! Dicta, beat eos voluptatem, minus et quisquam? sit amet consectetur adipisicing elit. Laudantium, repellendus.</p>
+                            <p>Lo obcaeta impedit! Dicta, beat eos voluptatem, minus et quisquam? sit amet consectetur
+                                adipisicing elit. Laudantium, repellendus.</p>
                             <div class="details">
-                                <div class="imgBx"> <img src="" alt="user-err"></div>
-                                <h3>some one famouss <span>Creative Designer</span></h3>
+                                <!-- <div class="imgBx"> <img src="" alt="user-err"></div> -->
+                                <h3> <a href=""class="hover-underline-animation"> someone famous </a><span><br> Creative Designer</span></h3>
                             </div>
+                        </div>
                     </div>
-                    </div>
-                    
+
                 </div>
                 <div class="swiper-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, veniam iusto delectus ea deleniti non suscipit hic similique. Doloribus, expedita aperiam deleniti id sapiente sint saepe cum hic repellendus maxime.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, veniam iusto delectus ea deleniti
+                    non suscipit hic similique. Doloribus, expedita aperiam deleniti id sapiente sint saepe cum hic
+                    repellendus maxime.
                 </div>
                 <div class="swiper-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, veniam iusto delectus ea deleniti non suscipit hic similique. Doloribus, expedita aperiam deleniti id sapiente sint saepe cum hic repellendus maxime.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, veniam iusto delectus ea deleniti
+                    non suscipit hic similique. Doloribus, expedita aperiam deleniti id sapiente sint saepe cum hic
+                    repellendus maxime.
                 </div>
             </div>
         </div>
@@ -45,16 +49,43 @@
                     modifier: 2,
                     slideShadows: true,
                 },
-                loop:true,
+                loop: true,
             });
         </script>
 
     </div>
-    
+
 
 
     <div class="writeT">
-        afds
+        <div class="login-box">
+            <h2>Write a Review</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" name="name" maxlength="20" required="true">
+                    <label>Full Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="ldp" maxlength="50" required="false">
+                    <label>Linked In Url</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="title" maxlength="20" required="true">
+                    <label>Title</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="review" maxlength="350" required="true">
+                    <label>Review</label>
+                </div>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </a>
+            </form>
+        </div>
     </div>
 
 
