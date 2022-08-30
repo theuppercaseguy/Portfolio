@@ -1,0 +1,109 @@
+.testimonials{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.writtenT{
+    border: 2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 320px !important;
+    /* height: 300px !important; */
+    height: max(350px) !important;
+    background: #01cbec;
+    border-radius: 10px;
+    filter: blur(4px);
+    
+}
+.swiper-slide-active{
+    filter: none;
+
+}
+.testimonialsBox{
+    position: relative;
+    /* width: 100%; */
+    padding: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* color: #999; */
+    /* font-family: "futura_b"; */
+
+    /* border: 2px solid red; */
+}
+.content p{
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
+    color:#33416ced;
+}
+.testimonialsBox .quote{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+}
+.testimonialsBox .details{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    /* color: #2196f3; */
+
+}
+.testimonialsBox .details .imgBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    /* border: 2px solid red; */
+}
+.testimonialsBox .details .imgBx img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.testimonialsBox .details h3{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #2196f3;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
+    /* color:#33416ced; */
+    line-height: 1.1em;
+}
+
+.testimonialsBox .details h3 span{
+    font-size: 12px;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
+    
+    color: #666;
+}
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right{
+    background: none !important;
+}
+
+
+

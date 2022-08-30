@@ -8,9 +8,12 @@
     <title>Saad Khan PortFolio</title>
     <link rel="stylesheet" href="{% static 'pp/css/index.css' %}">
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script defer src="{% static 'pp/js/nav-bar.js' %}"></script>
     <script defer src="{% static 'pp/js/particles.js' %}"></script>
     <script  defer src="{% static 'pp/js/app.js' %}"></script>
+    <script   src="{% static 'pp/js/index.js' %}"></script>
+
     
 </head>
 <body>
@@ -60,8 +63,8 @@
             </ul>
         </div>
         
-        <main id="main-section" class="border-line">
-            <section id="section-home">
+        <main id="main-section" class="border-line ">
+            <section id="section-home" class="reveal">
                 <div class="title  border-line">
                     <h1 class="title-text">SAAD <br> KHAN</h1>
                     <span class="myname-bottom-first-line"></span>
@@ -77,7 +80,54 @@
                 </div>
             </section>
 
-            <section id="section-about" class="border-line">about</section>
+            <section id="section-about" class="reveal">
+                <h1 class="">ABOUT</h1>
+                <div class="about-inner">
+                    <div class="inner-left border-line">
+                        <p>Hi, My name is <span>Saad Khan</span>, aka <span>The Upper Case Guy</span>.
+                            I like creating things, whether they be Games, WebSites,
+                            SoftWares or anything that gives a challenge. 
+                        </p>
+                        <p>
+                            My journey as a developer started way back, in my teens.
+                            Growing up I always had a nack for creating problems, and then
+                            ultimately solving them. Thats how I got into coding.
+                        </p>
+                        <p>
+                            Today I'm pursuing a Computer Engineering degree at <a href="" class="hover-underline-animation">GIK</a>, a mix of Two
+                            of my favourite fields. Part off and even Leading Multiple teams and socities
+                            at my College. Having done internships at multiple start-ups and
+                            Multi-National Tech Companies.
+                        </p>
+                        <p>Internships and start-ups where i worked at:</p>
+                        <ul>
+                            <li><a href="" class="hover-underline-animation">GoSpace</a></li>
+                            <li><a href="" class="hover-underline-animation">NIC</a></li>
+                            <li><a href="" class="hover-underline-animation">IT Park</a></li>
+                        </ul>
+                        <p>Some of the few Tech's and Concepts im good at:</p>
+                        <ul>
+                            <li>Django</li>
+                            <li>Laravel</li>
+                            <li>Html & CSS</li>
+                            <li>JavsScrip(ES6+)</li>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>TensorFlow</li>
+                            <li>OOPs</li>
+                            <li>Data Structures</li>
+                            <li>Data Bases</li>
+                            <li>Memory Management(Pointers)</li>
+                        </ul>
+                    </div>
+                    <div class="inner-right border-line left-slide-reveal">
+                        {%include 'pp/testimonials.html'%}
+
+                    </div>
+                    
+                </div>
+
+            </section>
             <section id="section-projects" class="border-line">projects</section>
             <section id="section-experience" class="border-line">experience</section>
 
