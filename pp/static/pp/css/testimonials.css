@@ -9,7 +9,7 @@
 
 
 .writtenT{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
     background: #596470;
     border-radius: 10px;
     filter: blur(4px);
-    box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
+    /* box-shadow: 0 15px 25px rgb(0 0 0 / 60%); */
     
 }
 .swiper-slide-active{
@@ -104,6 +104,7 @@
     color: #ff4d5a;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
+    text-transform: capitalize;
 }
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right{
@@ -134,7 +135,7 @@
     transform: translate(-50%, -50%);
     background: #596470;
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
     border-radius: 10px;
     height: fit-content;
   }

@@ -13,6 +13,8 @@ html{
     --grey:#a2a8ae;
     --blue:#00cdee;
     --heading-white:#fff;
+    --red:#ff4d5a;
+    --paras:#b6c8cc;
 }
 body{
     height: 100vh;
@@ -465,7 +467,7 @@ a{
 
 
 #section-about{
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: center;
     /* border: 2px solid red; */
 }
@@ -479,6 +481,7 @@ a{
     font-weight: normal;
     padding-top: 40px;
     padding-bottom: 20px;
+    margin-left:  min(2rem,3vw);
 }
 .about-inner{
     display: grid;
@@ -545,7 +548,7 @@ a{
 }
 
 #section-projects{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     scroll-snap-align: center;
 }
@@ -561,13 +564,6 @@ footer{
     scroll-snap-align:center;
     width: 99.99vw;
 }
-
-
-
-
-
-
-
 
 .left-slide-reveal{
     position: relative;

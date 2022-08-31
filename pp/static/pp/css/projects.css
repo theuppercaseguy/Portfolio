@@ -1,0 +1,131 @@
+
+.main-heading{
+    color: var(--heading-white);
+    font-family: "futura_m";
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    
+    font-weight: normal;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left:  min(2rem,3vw);
+    text-transform: capitalize;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 1080px; */
+}
+.projects-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 1080px; */
+}
+.projects-container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list{
+    /* width: clamp(1000px,1000px,); */
+    border: 2px solid rgb(0, 0, 0);
+    min-height:300px;
+    display: grid;
+    max-width: 1000px !important;
+    grid-template-columns: repeat(12,1fr);
+    
+    align-items: center;
+    margin-bottom: 100px;
+}
+.list > div{
+    border: 2px solid blue;
+}
+
+
+.project-content{
+    position: relative;
+    grid-area: 1 / 6 / 1 / 13;
+    border: 2px solid blue;
+    text-align: right;
+    z-index: 10;
+    
+    /* max-height: 150px; */
+    /* width: fit-content; */
+    /* min-width: 300px; */
+    /* min-width: max-content; */
+    /* position: relative;
+    left: 100px; */
+    /* font-size: 16rem; */
+}
+.proj-overline{
+    margin: 10px 0;
+    padding: 0;
+    color: var(--green);
+    text-transform: capitalize;   
+    font-size: 13px;
+    font-family:  "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-weight: 400;
+
+}
+.proj-title{
+    color: var(--red);
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+.proj-title >a{
+    color: inherit;
+    font-size:  clamp(24px, 5vw, 28px);
+    margin: 0;
+    padding: 0;
+}
+.proj-desc{
+    color: #cddde1;
+    margin: 0;
+    position:relative;
+    /* display: inline-block; */
+    z-index: 2;
+    padding: 25px;
+    border-radius:4px ;
+    background-color: #00a4bf;
+    font-size: 18px;
+    max-width: 400px;
+    text-align: right;
+}
+
+.tech-list{
+    list-style: none;
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    /* gap: 4px; */
+    margin: 5px 0px 5px !important;
+    padding-inline: 3px;
+    z-index: 2;
+}
+.tech-list > li{
+    color: var(--paras);
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+
+.proj-links{
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: flex-end; */
+}
+.proj-links > a{
+    z-index: 2;
+    color: red;
+}
+
+
+
+.project-visual{
+    position: relative;
+    z-index: 1;
+    grid-area: 1 / 1 / 1 / 7;
+}
