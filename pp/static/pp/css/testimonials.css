@@ -32,9 +32,9 @@
     background: #596470;
     border-radius: 10px;
     filter: blur(4px);
-    /* box-shadow: 0 15px 25px rgb(0 0 0 / 60%); */
-    
+    box-shadow: 0 15px 25px -15px rgb(0 0 0 / 60%);
 }
+  
 .swiper-slide-active{
     filter: none;
 
@@ -124,7 +124,10 @@
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
+.login-box:hover{
+  transition: all 0.25s ease-in;
+  box-shadow: 10px 10PX 30PX -15px #0e121a;
+}
 .login-box {
     position: relative;
     top: 50%;
@@ -135,7 +138,7 @@
     transform: translate(-50%, -50%);
     background: #596470;
     box-sizing: border-box;
-    /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
+
     border-radius: 10px;
     height: fit-content;
   }
