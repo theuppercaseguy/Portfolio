@@ -14,19 +14,21 @@
     <script defer src="{% static 'pp/js/particles.js' %}"></script>
     <script  defer src="{% static 'pp/js/app.js' %}"></script>
     <script   src="{% static 'pp/js/index.js' %}"></script>
+    <script defer  src="{% static 'pp/js/all.js' %}"></script>
 
     
 </head>
 <body>
     
     <div id="particles-js"></div>
+
     <div id="shorcuts">
+
         <div class="scroll-buttons-container">
             <ul>
-                <li><a href=""><span></span></a></li>
-                <li><a href=""><span></span></a></li>
-                <li><a href=""><span></span></a></li>
-                <li><a href=""><span></span></a></li>
+                <li class="scrol-btts bt1 inc-size" onclick="scroll_section('primary-navigation'),inc_scroll_size('bt1')"><a href="#section-home"><span></span></a></li>
+                <li class="scrol-btts bt2" onclick="scroll_section('section-about'),inc_scroll_size('bt2')"><a href="#section-about"><span></span></a></li>
+                <li class="scrol-btts bt3" onclick="scroll_section('section-projects'),inc_scroll_size('bt3')"><a href="#section-projects"><span></span></a></li>
             </ul>
         </div>  
         <div  class="right-side-btts">
@@ -34,8 +36,9 @@
         </div>
 
         <div  class="right-side-btts">
-            <a href=""><span id="lets-talk-side-btt">LT</span></a>
+            <div  onclick="slidedown()" class=""><span id="lets-talk-side-btt">LT</span></div>
         </div>
+    
     </div>
       
     <div class="" id="root">
@@ -161,66 +164,100 @@
         feel free to contact me anytime
          -->
     </div>
+
+    <div class="LT ">
+        <div class="LT-inner">
+            <div class="close-lt" onclick="slideup()"></div>
+            <h3>Share Your Thoughts</h3>
+            <form action="" method="post">
+                {%csrf_token%}
+                <div id="contact-form">
+                    <div class="main-form-content">
+                        <label for="Full-Name" class="field-label">Full Name</label>
+                        <input type="text" class="budget-field w-input" maxlength="256" name="Full-Name" placeholder="Saad Khan" required>
+                    </div>
+                    <div class="main-form-content">
+                        <label for="Company-Name" class="field-label">Company Name</label>
+                        <input type="text" class="budget-field w-input" maxlength="256" name="Company-Name" placeholder="Student" required>
+                    </div>
+                    <div class="main-form-content">
+                        <label for="email" class="field-label">Email Address</label>
+                        <input type="text" class="budget-field w-input" maxlength="256" name="email" placeholder="saadan06@gmail.com" required>
+                    </div>
+
+                    <div class="main-form-content">
+                        <label for="Message" class="field-label">Message</label>
+                        <textarea id="message" class="budget-field w-input" maxlength="5000" spellcheck="false" name="Message" placeholder="Anything you want to share. or request to build a website." ></textarea>
+                    </div>
+                    <div class="wrapper">
+                        <button class="" type="submit">
+                          <span>Submit</span>
+                         
+                        </button>
+                      </div>
+                </div>
+            </form>
+        </div>
+    </div>
     
-    
-<footer class="footer-distributed reveal">
+    <footer class="footer-distributed reveal">
 
-    <div class="footer-left">
+        <div class="footer-left">
 
-        <h3>Saad Khan<span><br>The Upper Case Guy</span></h3>
+            <h3>Saad Khan<span><br>The Upper Case Guy</span></h3>
 
-        <p class="footer-links">
-            <a href="#section-home" class="link-1 alter-underline-animation hover-underline-animation" >Home</a>
-            
-            <a href="#section-about" class="alter-underline-animation hover-underline-animation">About</a>
+            <p class="footer-links">
+                <a href="#section-home" class="link-1 alter-underline-animation hover-underline-animation" >Home</a>
+                
+                <a href="#section-about" class="alter-underline-animation hover-underline-animation">About</a>
 
-            <a href="#section-projects" class="alter-underline-animation hover-underline-animation">projects</a>
-            
-            <a href="#" class="alter-underline-animation hover-underline-animation">Contact</a>
-        </p>
+                <a href="#section-projects" class="alter-underline-animation hover-underline-animation">projects</a>
+                
+                <a href="#" class="alter-underline-animation hover-underline-animation">Contact</a>
+            </p>
 
-        <p class="footer-company-name">Saad Khan © 2001</p>
-    </div>
-
-    <div class="footer-center">
-
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p><span>Suite # 222</span> Faisal Town, Islamabad</p>
+            <p class="footer-company-name">Saad Khan © 2001</p>
         </div>
 
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+92-347-937-3364</p>
-        </div>
+        <div class="footer-center">
 
-        <div>
-            <i class="fa fa-envelope "></i>
-            <p><a href="mailto:support@company.com" class="hover-underline-animation">saadan06@gmail.com</a></p>
-        </div>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Suite # 222</span> Faisal Town, Islamabad</p>
+            </div>
 
-    </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+92-347-937-3364</p>
+            </div>
 
-    <div class="footer-right">
-
-        <p class="footer-company-about">
-            <span>About</span>
-            A self-taught Programer, Engineer and Hobyist. Always up for new challanges,
-            feel free to contact me anytime.
-        </p>
-
-        <div class="footer-icons">
-
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
+            <div>
+                <i class="fa fa-envelope "></i>
+                <p><a href="mailto:support@company.com" class="hover-underline-animation">saadan06@gmail.com</a></p>
+            </div>
 
         </div>
 
-    </div>
+        <div class="footer-right">
 
-</footer>
+            <p class="footer-company-about">
+                <span>About</span>
+                A self-taught Programer, Engineer and Hobyist. Always up for new challanges,
+                feel free to contact me anytime.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
 
 
 </body>

@@ -58,9 +58,9 @@
     transform: translateX(20%);
   }
   .mobile-nav-toggle {
+    z-index: 9999;
     display: block;
     position: absolute;
-    z-index: 9999;
     background-color: transparent;
     background: url("../images/navopen.svg");
 
@@ -84,6 +84,7 @@
   }
   .primary-navigation a:hover{
     color: var(--green);
+    transition: all 0.25s ease-in;
   }
 }
 
@@ -96,5 +97,6 @@
   }
   .primary-navigation a:hover{
     color: var(--green);
+    transition: all 0.25s ease-in;
   }
 }
