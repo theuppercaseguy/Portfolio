@@ -209,13 +209,13 @@
             <h3>Saad Khan<span><br>The Upper Case Guy</span></h3>
 
             <p class="footer-links">
-                <a href="#section-home" class="link-1 alter-underline-animation hover-underline-animation" >Home</a>
+                <a href="#section-home" onclick="inc_scroll_size('bt1')" class="link-1 alter-underline-animation hover-underline-animation" >Home</a>
                 
-                <a href="#section-about" class="alter-underline-animation hover-underline-animation">About</a>
+                <a href="#section-about" onclick="inc_scroll_size('bt2')"  class="alter-underline-animation hover-underline-animation">About</a>
 
-                <a href="#section-projects" class="alter-underline-animation hover-underline-animation">projects</a>
+                <a href="#section-projects" onclick="inc_scroll_size('bt3')" class="alter-underline-animation hover-underline-animation">projects</a>
                 
-                <a href="#" class="alter-underline-animation hover-underline-animation">Contact</a>
+                <a href="#contact" onclick="inc_scroll_size('bt4')" class="alter-underline-animation hover-underline-animation">Contact</a>
             </p>
 
             <p class="footer-company-name">Saad Khan © 2001</p>
@@ -283,7 +283,8 @@
 
         window.addEventListener("load",()=>{
             loader.style.display="none";
-            
+            loader.style.zIndex='-12';
+
             title_text.classList.add('title-text-animation');
             portfolio.classList.add('portfolio-animation');
             first_line_animation.classList.add('first-line-animation');
@@ -291,17 +292,17 @@
             para_animation.classList.add('para-animation');
             rs_animation.classList.add('rs_animation');
             tlb_animation.classList.add('tlb_animation');
-
+            
             socials_left_bar.classList.add('inc_opacity');
             email_right_bar.classList.add('inc_opacity');
+
             rsb1.classList.add('inc_opacity');
             rsb2.classList.add('inc_opacity');
             scrol_btts.classList.add('inc_opacity');
             
-        
-        
-        
-        
+            // rsb1.style.opacity='1';
+            // rsb2.style.opacity='1';
+            // rsb2.classList.remove('inc_opacity');
         })
 
 
