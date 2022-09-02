@@ -19,12 +19,15 @@
     
 </head>
 <body>
+    <div id="pre-loader">
+
+    </div>
     
     <div id="particles-js"></div>
 
     <div id="shorcuts">
 
-        <div class="scroll-buttons-container">
+        <div class=" scroll-buttons-container ">
             <ul>
                 <li class="scrol-btts bt1 inc-size" onclick="scroll_section('primary-navigation'),inc_scroll_size('bt1')"><a href="#section-home"><span></span></a></li>
                 <li class="scrol-btts bt2" onclick="scroll_section('section-about'),inc_scroll_size('bt2')"><a href="#section-about"><span></span></a></li>
@@ -88,7 +91,7 @@
         <main id="main-section" class="border-line ">
             <section id="section-home" class="reveal">
                 <div class="title  border-line">
-                    <h1 class="title-text">SAAD <br> KHAN</h1>
+                    <h1 class="title-text ">SAAD <br> KHAN</h1>
                     <span class="myname-bottom-first-line"></span>
                     <span class="myname-bottom-second-line"></span>
                     <p class="title-below-para">Computer / <br>
@@ -161,9 +164,7 @@
                 <a href="mailto:saadan06@gmail.com"><span>saadan06@gmail.com</span></a>
             </div>
         </div>
-        <!-- A self-taught Programer, Engineer and Hobyist. Always up for new challanges,
-        feel free to contact me anytime
-         -->
+        
     </div>
 
     <div class="LT ">
@@ -259,6 +260,57 @@
         </div>
 
     </footer>
+
+
+
+    <script>
+        var loader = document.getElementById("pre-loader");
+
+        var title_text = document.querySelector(".title-text");
+        var portfolio = document.querySelector(".portfolio");
+        var first_line_animation = document.querySelector(".myname-bottom-first-line");
+        var second_line_animation = document.querySelector(".myname-bottom-second-line");
+        var para_animation = document.querySelector(".title-below-para");
+        var rs_animation = document.querySelector(".resume-button");
+        var tlb_animation = document.querySelector(".talk-button");
+        
+        var socials_left_bar = document.querySelector(".socials-left-side-bar");
+        var email_right_bar = document.querySelector(".email-right-side-bar");
+        var scrol_btts = document.querySelector(".scroll-buttons-container");
+        var rsb1 = document.querySelector("#resume-side-btt");
+        var rsb2 = document.querySelector("#lets-talk-side-btt");
+        
+
+        window.addEventListener("load",()=>{
+            loader.style.display="none";
+            
+            title_text.classList.add('title-text-animation');
+            portfolio.classList.add('portfolio-animation');
+            first_line_animation.classList.add('first-line-animation');
+            second_line_animation.classList.add('second-line-animation');
+            para_animation.classList.add('para-animation');
+            rs_animation.classList.add('rs_animation');
+            tlb_animation.classList.add('tlb_animation');
+
+            socials_left_bar.classList.add('inc_opacity');
+            email_right_bar.classList.add('inc_opacity');
+            rsb1.classList.add('inc_opacity');
+            rsb2.classList.add('inc_opacity');
+            scrol_btts.classList.add('inc_opacity');
+            
+        
+        
+        
+        
+        })
+
+
+    </script>
+
+
+
+
+
 
 
 </body>
