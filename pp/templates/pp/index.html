@@ -70,7 +70,8 @@
           </li>
         </ul>
       </div>
-      <div class="right-side-btts">
+      
+      <!-- <div class="right-side-btts">
         <a href="{% url 'pp:resume_download' %}" target="_blank"><span id="resume-side-btt">RS</span></a>
       </div>
 
@@ -78,7 +79,8 @@
         <div onclick="slidedown()" class="">
           <span id="lets-talk-side-btt">LT</span>
         </div>
-      </div>
+      </div> -->
+
     </div>
 
     <div class="" id="root">
@@ -102,7 +104,7 @@
         <ul style="list-style: none">
           <li>
             <a
-              href="https://github.com/bchiang7"
+              href="https://github.com/theuppercaseguy"
               aria-label="GitHub"
               target="_blank"
               rel="noreferrer"
@@ -128,7 +130,7 @@
 
           <li>
             <a
-              href="https://www.instagram.com/bchiang7"
+              href="https://www.instagram.com/theuppercaseguyy/"
               aria-label="Instagram"
               target="_blank"
               rel="noreferrer"
@@ -156,7 +158,7 @@
 
           <li>
             <a
-              href="https://www.linkedin.com/in/bchiang7"
+              href="https://www.linkedin.com/in/saad-k-7aba04138/"
               aria-label="Linkedin"
               target="_blank"
               rel="noreferrer"
@@ -179,9 +181,10 @@
                 <circle cx="4" cy="4" r="2"></circle></svg>
               </a>
           </li>
+
           <li>
             <a
-              href="https://twitter.com/bchiang7"
+              href="https://twitter.com/KhanSaadan060"
               aria-label="Twitter"
               target="_blank"
               rel="noreferrer"
@@ -202,6 +205,7 @@
                 ></path></svg>
               </a>
           </li>
+
         </ul>
 
       </div>
@@ -217,7 +221,7 @@
             <span class="myname-bottom-second-line"></span>
             <p class="title-below-para">
               Computer / <br />
-              Software engineer.
+              Software Engineer.
             </p>
           </div>
 
@@ -249,7 +253,7 @@
               </p>
               <p>
                 Today I'm pursuing a Computer Engineering degree at
-                <a href="" class="hover-underline-animation">GIK</a>, a mix of
+                <a href="https://giki.edu.pk/" target="_blank" class="hover-underline-animation">GIK</a>, a mix of
                 Two of my favourite fields. Part off and even Leading Multiple
                 teams and socities at my College. Having done internships at
                 multiple start-ups and Multi-National Tech Companies.
@@ -257,11 +261,11 @@
               <p>Internships and start-ups where i worked at:</p>
               <ul>
                 <li>
-                  <a href="" class="hover-underline-animation">GoSpace</a>
+                  <a href="https://ourgoodspace.com/" target="_blank" class="hover-underline-animation">GoodSpace</a>
                 </li>
-                <li><a href="" class="hover-underline-animation">NIC</a></li>
+                <li><a href="https://nicpeshawar.pk/" target="_blank" class="hover-underline-animation">NIC</a></li>
                 <li>
-                  <a href="" class="hover-underline-animation">IT Park</a>
+                  <a href="http://stit.kp.gov.pk/kpitb/contact" target="_blank" class="hover-underline-animation">IT Park</a>
                 </li>
               </ul>
               <p>Some of the few Tech's and Concepts im good at:</p>
@@ -290,76 +294,21 @@
         </section>
       </main>
 
-      <div class="email-right-side-bar border-line" orientation="right">
+      <div class="email-right-side-bar border-line">
         <div class="right-bar">
-          <a href="mailto:saadan06@gmail.com"
-            ><span>saadan06@gmail.com</span></a
-          >
+          <a href="mailto:saadan06@gmail.com" class="email-right-side-just">
+            <span>saadan06@gmail.com</span>
+          </a>
         </div>
-      </div>
-
-    </div>
-
-    <div class="LT">
-      <div class="LT-inner">
-        <div class="close-lt" onclick="slideup()"></div>
-        <h3>Share Your Thoughts</h3>
-        <form action="" method="post">
-
-          {%csrf_token%}
-          <div id="contact-form">
-            <div class="main-form-content">
-              <label for="Full-Name" class="field-label">Full Name</label>
-              <input
-                type="text"
-                class="budget-field w-input"
-                maxlength="256"
-                name="Full-Name"
-                placeholder="Saad Khan"
-                required
-              />
-            </div>
-            <div class="main-form-content">
-              <label for="Company-Name" class="field-label">Company Name</label>
-              <input
-                type="text"
-                class="budget-field w-input"
-                maxlength="256"
-                name="Company-Name"
-                placeholder="Student"
-                required
-              />
-            </div>
-            <div class="main-form-content">
-              <label for="email" class="field-label">Email Address</label>
-              <input
-                type="text"
-                class="budget-field w-input"
-                maxlength="256"
-                name="email"
-                placeholder="saadan06@gmail.com"
-                required
-              />
-            </div>
-
-            <div class="main-form-content">
-              <label for="Message" class="field-label">Message</label>
-              <textarea
-                id="message"
-                class="budget-field w-input"
-                maxlength="5000"
-                spellcheck="false"
-                name="Message"
-                placeholder="Anything you want to share. or request to build a website."
-              ></textarea>
-            </div>
-            <div class="wrapper">
-              <button class="button-contanct" value="letstalk-post" name="letstalk-post" type="submit">
-                <span>Submit</span>
-              </button>
-            </div>
+        <div class="right-side-btts">
+          <a href="{% url 'pp:resume_download' %}" target="_blank"><span id="resume-side-btt">RS</span></a>
+        </div>
+  
+        <div class="right-side-btts">
+          <div onclick="slidedown()" class="">
+            <span id="lets-talk-side-btt">LT</span>
           </div>
-        </form>
+        </div>
       </div>
     </div>
 
@@ -433,13 +382,76 @@
         </p>
 
         <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/saad-k-7aba04138/"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100003458003335"><i class="fa fa-facebook"></i></a>
+          <a target="_blank" href="https://twitter.com/KhanSaadan060"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" href="https://github.com/theuppercaseguy"><i class="fa fa-github"></i></a>
         </div>
       </div>
     </footer>
+
+    <div class="LT">
+      <div class="LT-inner">
+        <div class="close-lt" onclick="slideup()"></div>
+        <h3>Share Your Thoughts</h3>
+        <form action="" method="post">
+
+          {%csrf_token%}
+          <div id="contact-form">
+            <div class="main-form-content">
+              <label for="Full-Name" class="field-label">Full Name</label>
+              <input
+                type="text"
+                class="budget-field w-input"
+                maxlength="256"
+                name="Full-Name"
+                placeholder="Saad Khan"
+                required
+              />
+            </div>
+            <div class="main-form-content">
+              <label for="Company-Name" class="field-label">Company Name</label>
+              <input
+                type="text"
+                class="budget-field w-input"
+                maxlength="256"
+                name="Company-Name"
+                placeholder="Student"
+                required
+              />
+            </div>
+            <div class="main-form-content">
+              <label for="email" class="field-label">Email Address</label>
+              <input
+                type="text"
+                class="budget-field w-input"
+                maxlength="256"
+                name="email"
+                placeholder="saadan06@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="main-form-content">
+              <label for="Message" class="field-label">Message</label>
+              <textarea
+                id="message"
+                class="budget-field w-input"
+                maxlength="5000"
+                spellcheck="false"
+                name="Message"
+                placeholder="Anything you want to share. or request to build a website."
+              ></textarea>
+            </div>
+            <div class="wrapper">
+              <button class="button-contanct" value="letstalk-post" name="letstalk-post" type="submit">
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script>
       var loader = document.getElementById("pre-loader");
@@ -483,9 +495,6 @@
         rsb2.classList.add("inc_opacity");
         scrol_btts.classList.add("inc_opacity");
 
-        // rsb1.style.opacity='1';
-        // rsb2.style.opacity='1';
-        // rsb2.classList.remove('inc_opacity');
       });
     </script>
   </body>

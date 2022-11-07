@@ -138,3 +138,17 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '5432'
+EMAIL_HOST_USER = 'saadan060@gmail.com'
+EMAIL_HOST_PASSWORD = 'lucifermorningstar'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+
+AWS_ACCESS_KEY_ID = 'AKIARSDMIO6TXGDMI2VD'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_SES_REGION_NAME = 'us-east-1' #(ex: us-east-2)
+AWS_SES_REGION_ENDPOINT ='email.us-east-1.amazonaws.com' #(ex: email.us-east-2.amazonaws.com)

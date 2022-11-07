@@ -77,7 +77,7 @@
   }
 }
 
-@media (min-width: 35em) and (max-width: 55em) {
+/* @media (min-width: 35em) and (max-width: 55em) {
   .primary-navigation a > span[aria-hidden] {
     display: none;
     
@@ -86,11 +86,11 @@
     color: var(--green);
     transition: all 0.25s ease-in;
   }
-}
+} */
 
 @media (min-width: 35em) {
   .primary-navigation {
-    --gap: clamp(1.5rem, 10vw, 10rem);
+    --gap: clamp(1.5rem, 5vw, 8rem);
     padding-block: 1.5rem;
     padding-inline: clamp(3rem, 15vw, 20rem);
     /* width: 40em; */
@@ -99,4 +99,5 @@
     color: var(--green);
     transition: all 0.25s ease-in;
   }
+  
 }

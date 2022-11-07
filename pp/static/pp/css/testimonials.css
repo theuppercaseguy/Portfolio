@@ -41,18 +41,17 @@
 }
 .testimonialsBox{
     position: relative;
-    /* width: 100%; */
     padding: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
-    /* color: #999; */
-    /* font-family: "futura_b"; */
-
-    /* border: 2px solid red; */
+    
 }
 .content p{
     font-family:"Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
-    color:#64ffda;
+    color:#64ffda;   
+}
+.content p::first-letter{
+  text-transform: capitalize;
 }
 .testimonialsBox .quote{
     position: absolute;
@@ -95,6 +94,7 @@
     line-height: 1.1em;
 }
 .testimonialsBox .details h3 a{
+    text-transform: capitalize;
     color:#00cdee;
 }
 .testimonialsBox .details h3 span{

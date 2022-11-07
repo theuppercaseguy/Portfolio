@@ -12,6 +12,7 @@
     margin-left:  min(2rem,3vw);
     text-transform: capitalize;
 }
+
 .center{
     display: flex;
     justify-content: center;
