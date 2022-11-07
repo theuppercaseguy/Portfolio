@@ -870,7 +870,7 @@ a{
   
 }
 
-button{
+.button-contanct {
     font-family: 'Ubuntu', sans-serif;
     width: 170px;
     height: 40px;
@@ -887,13 +887,13 @@ button{
     transition: all .35s;
 }
 
-button:hover{
+.button-contanct:hover{
   background: #fff;
   color: var(--green);
   border-color: var(--blue);
 }
 
-button span{
+.button-contanct span{
   opacity: 1;
   visibility: visible;
   transition: all .35s;
@@ -901,13 +901,13 @@ button span{
 
 
 
-button.is_active{
+.button-contanct.is_active{
   width: 40px;
   height: 40px;
 }
 
 
-button.is_active span{
+.button-contanct.is_active span{
   opacity: 0;
   visibility: hidden;
 }
@@ -1113,6 +1113,5 @@ label{
 }
 @keyframes inc-opacity {
     0%{ opacity: 0;}   
-    100%{opacity: 1;}   
-    
+    100%{opacity: 1;}      
 }

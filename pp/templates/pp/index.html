@@ -22,6 +22,7 @@
     <script src="{% static 'pp/js/index.js' %}"></script>
     <script defer src="{% static 'pp/js/all.js' %}"></script>
   </head>
+
   <body>
 
     <div id="pre-loader">
@@ -225,8 +226,8 @@
             <div class="resume-button">
               <a href="{% url 'pp:resume_download' %}" target="_blank"><span>resume</span></a>
             </div>
-            <div class="talk-button resume-button">
-              <a href=""><span>Lets Talk</span></a>
+            <div class="talk-button resume-button" style="cursor: pointer;" onclick="slidedown()">
+              <a ><span>Lets Talk</span></a>
             </div>
           </div>
         </section>
@@ -296,6 +297,7 @@
           >
         </div>
       </div>
+
     </div>
 
     <div class="LT">
@@ -303,6 +305,7 @@
         <div class="close-lt" onclick="slideup()"></div>
         <h3>Share Your Thoughts</h3>
         <form action="" method="post">
+
           {%csrf_token%}
           <div id="contact-form">
             <div class="main-form-content">
@@ -351,7 +354,7 @@
               ></textarea>
             </div>
             <div class="wrapper">
-              <button class="" type="submit">
+              <button class="button-contanct" value="letstalk-post" name="letstalk-post" type="submit">
                 <span>Submit</span>
               </button>
             </div>

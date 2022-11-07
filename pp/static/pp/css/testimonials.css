@@ -294,3 +294,16 @@
       bottom: 100%;
     }
   }
+
+
+
+#wr-post-button{
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  letter-spacing: inherit;
+  color: inherit;
+  animation: inherit;
+  margin: 0px;
+  padding: 0px;
+}

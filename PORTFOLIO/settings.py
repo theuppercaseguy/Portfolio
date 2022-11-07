@@ -41,11 +41,11 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django_babel.middleware.LocaleMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -76,12 +76,15 @@ WSGI_APPLICATION = 'PORTFOLIO.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
+'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'zslxiaoi',
+    'USER':'zslxiaoi',
+    'PASSWORD':'codkc8v-KfJs_W-ipT46NM51m0Eh--P6', 
+    'HOST':'surus.db.elephantsql.com',
+    'PORT': 5432
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
