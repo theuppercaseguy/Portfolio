@@ -7,4 +7,4 @@ class Reviewsss(models.Model):
     priority = models.IntegerField()
     title = models.TextField()
     review = models.TextField()
-    
+    turnonn = models.BooleanField(default = False)

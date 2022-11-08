@@ -10,7 +10,7 @@ def index(request):
 
     context = {}
     cursor = connection.cursor()
-    cursor.execute("select * from public.reviews where turnonn = 'true' order by priority desc;")
+    cursor.execute("select * from public.reviewsss where turnonn = 'true' order by priority desc;")
     context = {"data":cursor.fetchall(),}
     cursor.close()
 
