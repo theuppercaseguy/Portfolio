@@ -9,7 +9,7 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 
-                {% for name,id,title,review,e,f,prio in data %}
+                {% for i,name,id,priority,title,review,turnonn in data %}
 
                 <div class="swiper-slide">
                     <div class="testimonialsBox">
@@ -18,7 +18,7 @@
                         <div class="content">
                             <p>{{review}}</p>
                             <div class="details">
-                                {% if id != "none"%}
+                                {% if id != "NULL"%}
                                 
                                 <h3> <a target="_blank" href="{{id}}" class="hover-underline-animation"> {{name}} </a><span><br> {{title}}</span></h3>
                                 
@@ -75,7 +75,7 @@
                     <label>Full Name</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="ldp" maxlength="50" required="false">
+                    <input type="text" name="ldp" maxlength="50" >
                     <label>Linked In (Optional)</label>
                 </div>
                 <div class="user-box">

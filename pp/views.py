@@ -9,7 +9,7 @@ def index(request):
 
     context = {}
     cursor = connection.cursor()
-    cursor.execute("select * from reviews where turnonn = 'true' order by priority desc;")
+    cursor.execute("select * from pp_reviewsss where turnonn = 'true' order by priority desc;")
     context = {"data":cursor.fetchall(),}
     cursor.close()
 
@@ -22,14 +22,13 @@ def index(request):
         
         cursor = connection.cursor()    
         try:
-            cursor.execute("insert into reviews(name,linkedin_url,title,review,turnonn) values(%s,%s,%s,%s,%s);",(name,linkid,title,review,'false',))
+            cursor.execute("insert into pp_reviewsss(name,linkedin,title,review) values(%s,%s,%s,%s);",(name,linkid,title,review,))
             
             connection.commit()
-            # print(f"context is: {context}")
-            
+        
         except Exception as e:
-           cursor.close()
-
+            cursor.close()
+            
         return redirect("/")
 
     elif request.POST.get('letstalk-post',False) == "letstalk-post":
