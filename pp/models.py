@@ -4,7 +4,7 @@ from django.db import models
 class Reviewsss(models.Model):
     name = models.TextField()
     linkedin = models.TextField()
-    priority = models.IntegerField()
+    priority = models.IntegerField(default = 0)
     title = models.TextField()
     review = models.TextField()
-    turnonn = models.BooleanField(default = False)
+    turnonn = models.BooleanField(default = "false")
