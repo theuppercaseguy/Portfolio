@@ -1,0 +1,509 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saad Khan PortFolio</title>
+    <link rel="stylesheet" href="{% static 'pp/css/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+    <script defer src="{% static 'pp/js/nav-bar.js' %}"></script>
+    <script defer src="{% static 'pp/js/particles.js' %}"></script>
+    <script defer src="{% static 'pp/js/app.js' %}"></script>
+    <script src="{% static 'pp/js/index.js' %}"></script>
+    <script defer src="{% static 'pp/js/all.js' %}"></script>
+  </head>
+
+  <body>
+
+    <div id="pre-loader">
+      <div class="flex1">
+        <div class="head">
+          <h1>S.K</h1>
+        </div>
+        <div class="loader">
+          <span class="loader__element"></span>
+          <span class="loader__element"></span>
+          <span class="loader__element"></span>
+        </div>
+
+      </div>
+    </div>
+    
+    <div id="particles-js"></div>
+
+    <div id="shorcuts">
+      <div class="scroll-buttons-container">
+        <ul>
+          <li
+            class="scrol-btts bt1 inc-size"
+            onclick="scroll_section('primary-navigation'),inc_scroll_size('bt1')"
+          >
+            <a href="#section-home"><span></span></a>
+          </li>
+          <li
+            class="scrol-btts bt2"
+            onclick="scroll_section('section-about'),inc_scroll_size('bt2')"
+          >
+            <a href="#section-about"><span></span></a>
+          </li>
+          <li
+            class="scrol-btts bt3"
+            onclick="scroll_section('section-projects'),inc_scroll_size('bt3')"
+          >
+            <a href="#section-projects"><span></span></a>
+          </li>
+          <li
+            class="scrol-btts bt4"
+            onclick="scroll_section('footer-distributed'),inc_scroll_size('bt4'), down_scroll_click()"
+          >
+            <a href="#foot"><span></span></a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- <div class="right-side-btts">
+        <a href="{% url 'pp:resume_download' %}" target="_blank"><span id="resume-side-btt">RS</span></a>
+      </div>
+
+      <div class="right-side-btts">
+        <div onclick="slidedown()" class="">
+          <span id="lets-talk-side-btt">LT</span>
+        </div>
+      </div> -->
+
+    </div>
+
+    <div class="" id="root">
+      <header class="primary-header flex border-line header-grid-item">
+        <div id="header-logo" class="border-line">
+          <a href="#"><h1 class="logo">Saad Khan</h1></a>
+        </div>
+
+        <button
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          class="mobile-nav-toggle"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="nav-grid-item">{%include 'pp/navbar.html'%}</div>
+      </header>
+
+      <div class="socials-left-side-bar border-line" orientation="left">
+        <ul style="list-style: none">
+          <li>
+            <a
+              href="https://github.com/theuppercaseguy"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-github"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.instagram.com/theuppercaseguyy/"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noreferrer"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-instagram"
+              >
+                <title>Instagram</title>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          
+            </a>
+          
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/saad-k-7aba04138/"
+              aria-label="Linkedin"
+              target="_blank"
+              rel="noreferrer"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-linkedin"
+              >
+                <title>LinkedIn</title>
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+          </li>
+
+          <li>
+            <a
+              href="https://twitter.com/KhanSaadan060"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noreferrer"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-twitter"
+              >
+                <title>Twitter</title>
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                ></path></svg>
+              </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <main id="main-section" class="border-line">
+        <section id="section-home" class="reveal">
+          <div class="title border-line">
+            <h1 class="title-text">
+              SAAD <br />
+              KHAN
+            </h1>
+            <span class="myname-bottom-first-line"></span>
+            <span class="myname-bottom-second-line"></span>
+            <p class="title-below-para">
+              Computer / <br />
+              Software Engineer.
+            </p>
+          </div>
+
+          <div class="hero-right-side border-line">
+            <p class="portfolio">PORTFOLIO</p>
+            <div class="resume-button">
+              <a href="{% url 'pp:resume_download' %}" target="_blank"><span>resume</span></a>
+            </div>
+            <div class="talk-button resume-button" style="cursor: pointer;" onclick="slidedown()">
+              <a ><span>Lets Talk</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-about" class="reveal">
+          <h1 class="">ABOUT</h1>
+          <div class="about-inner reveal">
+            <div class="inner-left border-line reveal">
+              <p>
+                Hi, My name is <span>Saad Khan</span>, aka
+                <span>The Upper Case Guy</span>. I like creating things, whether
+                they be Games, WebSites, SoftWares or anything that gives a
+                challenge.
+              </p>
+              <p>
+                My journey as a developer started way back, in my teens. Growing
+                up I always had a nack for creating problems, and then
+                ultimately solving them. Thats how I got into coding.
+              </p>
+              <p>
+                Today I'm pursuing a Computer Engineering degree at
+                <a href="https://giki.edu.pk/" target="_blank" class="hover-underline-animation">GIK</a>, a mix of
+                Two of my favourite fields. Part off and even Leading Multiple
+                teams and socities at my College. Having done internships at
+                multiple start-ups and Multi-National Tech Companies.
+              </p>
+              <p>Internships and start-ups where i worked at:</p>
+              <ul>
+                <li>
+                  <a href="https://ourgoodspace.com/" target="_blank" class="hover-underline-animation">GoodSpace</a>
+                </li>
+                <li><a href="https://nicpeshawar.pk/" target="_blank" class="hover-underline-animation">NIC</a></li>
+                <li>
+                  <a href="http://stit.kp.gov.pk/kpitb/contact" target="_blank" class="hover-underline-animation">IT Park</a>
+                </li>
+              </ul>
+              <p>Some of the few Tech's and Concepts im good at:</p>
+              <ul>
+                <li>Django</li>
+                <li>Laravel</li>
+                <li>Html & CSS</li>
+                <li>JavsScrip(ES6+)</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>TensorFlow</li>
+                <li>OOPs</li>
+                <li>Data Structures</li>
+                <li>Data Bases</li>
+                <li>Memory Management(Pointers)</li>
+              </ul>
+            </div>
+            <div class="inner-right border-line left-slide-reveal reveal">
+              {%include 'pp/testimonials.html'%}
+            </div>
+          </div>
+        </section>
+
+        <section id="section-projects" class="border-line reveal">
+          {%include 'pp/projects.html'%}
+        </section>
+      </main>
+
+      <div class="email-right-side-bar border-line">
+        <div class="right-bar">
+          <a href="mailto:saadan06@gmail.com" class="email-right-side-just">
+            <span>saadan06@gmail.com</span>
+          </a>
+        </div>
+        <div class="right-side-btts">
+          <a href="{% url 'pp:resume_download' %}" target="_blank"><span id="resume-side-btt">RS</span></a>
+        </div>
+  
+        <div class="right-side-btts">
+          <div onclick="slidedown()" class="">
+            <span id="lets-talk-side-btt">LT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot footer-distributed reveal">
+      <div class="footer-left">
+        <h3>
+          Saad Khan<span><br />The Upper Case Guy</span>
+        </h3>
+
+        <p class="footer-links">
+          <a
+            href="#section-home"
+            onclick="inc_scroll_size('bt1')"
+            class="link-1 alter-underline-animation hover-underline-animation"
+            >Home</a
+          >
+
+          <a
+            href="#section-about"
+            onclick="inc_scroll_size('bt2')"
+            class="alter-underline-animation hover-underline-animation"
+            >About</a
+          >
+
+          <a
+            href="#section-projects"
+            onclick="inc_scroll_size('bt3')"
+            class="alter-underline-animation hover-underline-animation"
+            >projects</a
+          >
+
+          <a
+            href="#contact"
+            onclick="inc_scroll_size('bt4')"
+            class="alter-underline-animation hover-underline-animation"
+            >Contact</a
+          >
+        </p>
+
+        <p class="footer-company-name">Saad Khan © 2001</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Suite # 222</span> Faisal Town, Islamabad</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+92-347-937-3364</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a
+              href="mailto:support@company.com"
+              class="hover-underline-animation"
+              >saadan06@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About</span>
+          A self-taught Programer, Engineer and Hobyist. Always up for new
+          challanges, feel free to contact me anytime.
+        </p>
+
+        <div class="footer-icons">
+          <a target="_blank" href="https://www.linkedin.com/in/saad-k-7aba04138/"><i class="fa fa-linkedin"></i></a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100003458003335"><i class="fa fa-facebook"></i></a>
+          <a target="_blank" href="https://twitter.com/KhanSaadan060"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" href="https://github.com/theuppercaseguy"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="LT">
+      <div class="LT-inner">
+        <div class="close-lt" onclick="slideup()"></div>
+        <h3>Share Your Thoughts</h3>
+        <form action="" method="post">
+
+          {%csrf_token%}
+          <div id="contact-form">
+            <div class="main-form-content">
+              <label for="Full-Name" class="field-label">Full Name</label>
+              <input
+                type="text"
+                class="budget-field w-input"
+                maxlength="256"
+                name="Full-Name"
+                placeholder="Saad Khan"
+                required
+              />
+            </div>
+            <div class="main-form-content">
+              <label for="Company-Name" class="field-label">Company Name</label>
+              <input
+                type="text"
+                class="budget-field w-input"
+                maxlength="256"
+                name="Company-Name"
+                placeholder="Student"
+                required
+              />
+            </div>
+            <div class="main-form-content">
+              <label for="email" class="field-label">Email Address</label>
+              <input
+                type="text"
+                class="budget-field w-input"
+                maxlength="256"
+                name="email"
+                placeholder="saadan06@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="main-form-content">
+              <label for="Message" class="field-label">Message</label>
+              <textarea
+                id="message"
+                class="budget-field w-input"
+                maxlength="5000"
+                spellcheck="false"
+                name="Message"
+                placeholder="Anything you want to share. or request to build a website."
+              ></textarea>
+            </div>
+            <div class="wrapper">
+              <button class="button-contanct" value="letstalk-post" name="letstalk-post" type="submit">
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var loader = document.getElementById("pre-loader");
+
+      var title_text = document.querySelector(".title-text");
+      var portfolio = document.querySelector(".portfolio");
+      var first_line_animation = document.querySelector(
+        ".myname-bottom-first-line"
+      );
+      var second_line_animation = document.querySelector(
+        ".myname-bottom-second-line"
+      );
+      var para_animation = document.querySelector(".title-below-para");
+      var rs_animation = document.querySelector(".resume-button");
+      var tlb_animation = document.querySelector(".talk-button");
+
+      var socials_left_bar = document.querySelector(".socials-left-side-bar");
+      var email_right_bar = document.querySelector(".email-right-side-bar");
+      var scrol_btts = document.querySelector(".scroll-buttons-container");
+      var rsb1 = document.querySelector("#resume-side-btt");
+      var rsb2 = document.querySelector("#lets-talk-side-btt");
+
+      window.addEventListener("load", () => {
+        loader.style.transition = "all 1s"
+        loader.style.transform = "translateY(-1100px)"
+        loader.style.zIndex = "-12";
+        // loader.style.display = "none";
+
+        title_text.classList.add("title-text-animation");
+        portfolio.classList.add("portfolio-animation");
+        first_line_animation.classList.add("first-line-animation");
+        second_line_animation.classList.add("second-line-animation");
+        para_animation.classList.add("para-animation");
+        rs_animation.classList.add("rs_animation");
+        tlb_animation.classList.add("tlb_animation");
+
+        socials_left_bar.classList.add("inc_opacity");
+        email_right_bar.classList.add("inc_opacity");
+
+        rsb1.classList.add("inc_opacity");
+        rsb2.classList.add("inc_opacity");
+        scrol_btts.classList.add("inc_opacity");
+
+      });
+
+      setTimeout(function(){
+        var pre_loader=document.querySelector("#pre-loader");
+        pre_loader.remove();
+      },30000)
+
+
+
+    </script>
+  </body>
+</html>

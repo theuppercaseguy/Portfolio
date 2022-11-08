@@ -1,0 +1,104 @@
+{%load static%}
+
+<link rel="stylesheet" href="{%static 'pp/css/testimonials.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+<!-- <h3>Write a Testimonial</h3> -->
+<section class="testimonials ">
+    <div class="writtenT ">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                
+                {% for name,id,title,review,e,f,prio in data %}
+
+                <div class="swiper-slide">
+                    <div class="testimonialsBox">
+                        <img src="{% static 'pp/images/quotes.png' %}" alt="err-quote" class="quote">
+
+                        <div class="content">
+                            <p>{{review}}</p>
+                            <div class="details">
+                                {% if id != "none"%}
+                                
+                                <h3> <a target="_blank" href="{{id}}" class="hover-underline-animation"> {{name}} </a><span><br> {{title}}</span></h3>
+                                
+                                {%else%}
+                                
+                                <h3> <a href="" class="hover-underline-animation"> {{name}} </a><span><br> {{title}}</span></h3>
+
+                                {%endif%}
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                },
+                loop: true,
+            });
+        </script>
+
+    </div>
+
+
+
+    <div class="writeT">
+        <div class="login-box">
+            <h2>Write a Review</h2>
+            
+            <form  method="post">
+                {% csrf_token %}
+
+                <div class="user-box">
+                    <input type="text" name="name" maxlength="20" required="true">
+                    <label>Full Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="ldp" maxlength="50" required="false">
+                    <label>Linked In (Optional)</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="title" maxlength="20" required="true">
+                    <label>Title</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="review" maxlength="350" required="true">
+                    <label>Review</label>
+                </div>
+                
+
+
+                <a type="post" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button type="submit" value="review-post" name="review-post" id="wr-post-button">SUBMIT</button>
+                </a>
+            </form>
+        </div>
+    </div>
+
+
+</section>

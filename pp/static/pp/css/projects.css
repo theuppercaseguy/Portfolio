@@ -1,0 +1,203 @@
+
+.main-heading{
+    color: var(--heading-white);
+    font-family: "futura_m";
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    
+    font-weight: normal;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left:  min(2rem,3vw);
+    text-transform: capitalize;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 1080px; */
+}
+.projects-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 1080px; */
+}
+.projects-container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list{
+
+    /* border: 2px solid rgb(0, 0, 0); */
+    display: grid;
+    max-width: 800px !important;
+    grid-template-columns: repeat(12,1fr);
+    
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.project-content{
+
+    position: relative;
+    grid-area: 1 / 6 / 1 / 13;
+    text-align: right;
+    z-index: 2;
+    
+}
+.proj-overline{
+    margin: 10px 0;
+    padding: 0;
+    color: var(--green);
+    text-transform: capitalize;   
+    font-size: 13px;
+    font-family:  "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-weight: 400;
+
+}
+.proj-title{
+    color: var(--red);
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+.proj-title >a{
+    color: inherit;
+    font-size:  clamp(24px, 5vw, 28px);
+    margin: 0;
+    padding: 0;
+}
+.proj-desc{
+    color: var(--blue);
+    margin: 0;
+    position:relative;
+    /* display: inline-block; */
+    z-index: 2;
+    padding: 25px;
+    border-radius:4px ;
+    background-color: #596470;
+    font-size: 18px;
+    /* max-width: 400px; */
+    text-align: right;
+}
+.proj-desc:hover{
+    box-shadow: 0 10PX 30PX -15px #112240;
+    transition: all 0.25s 
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.proj-desc > a{
+    color: var(--green);
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+.tech-list{
+    list-style: none;
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    /* gap: 4px; */
+    margin: 5px 0px 5px !important;
+    padding-inline: 3px;
+    z-index: 2;
+}
+.tech-list > li{
+    color: var(--green);
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+
+.proj-links{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.proj-links svg{
+    z-index: 2;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--paras);
+}
+
+.proj-links svg:hover{
+    color: var(--green);
+}
+
+.project-visual{
+    position: relative;
+    z-index: 1;
+    grid-area: 1 / 1 / 1 / 7;
+}
+
+
+.videowrapper{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+    filter: grayscale(70%) contrast(1) brightness(85%); 
+}
+.videowrapper:hover{
+    filter: none;
+    transition: all 0.25s ease-in;
+}
+
+.project-visual  iframe{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    /* border: 2px solid red; */
+}
+
+.alt > .project-visual{
+    grid-area: 1 / 6 / 1 / 13;
+    z-index: 2;
+}
+
+.alt > .project-content{
+    position: relative;
+    grid-area: 1 / 1 / 1 / 7;
+    z-index: 2;
+    text-align: left;
+}
+
+.alt > .project-content > .proj-desc{
+    text-align: left;
+}
+.alt > .project-content > .tech-list{
+    flex-direction: row;
+}
+.alt > .project-content > .tech-list > li{
+    padding: 0%;
+    padding-right:20px ;
+}
+.alt > .project-content > .proj-links{
+    flex-direction: row;
+}
+.alt > .project-content > .proj-links  svg{
+    margin: 0%;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+{%load static%}
+<link rel="stylesheet" href="{% static 'pp/css/nav-bar.css' %}">
+<script defer  src="{% static 'pp/js/all.js' %}"></script>
+
+
+<nav>
+    <ul id="primary-navigation"  class="primary-navigation flex" data-visible="false">
+        <li class="active">
+            <a href="#section-home" onclick="inc_scroll_size('bt1'), scroll_section('primary-navigation')">
+                <span aria-hidden="true">00</span> Home
+            </a>
+        </li>
+        <li>
+            <a href="#section-about" onclick="inc_scroll_size('bt2')">
+                <span aria-hidden="true">01</span> About
+            </a>
+        </li>
+        <li>
+            <a href="#section-projects" onclick="inc_scroll_size('bt3')">
+                <span aria-hidden="true">02</span> Projects
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="down_scroll_click(), inc_scroll_size('bt4')">
+                <span aria-hidden="true">03</span> Contact
+            </a>
+        </li>
+
+    </ul>
+</nav>
