@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 from django.http import FileResponse
 from django.db import connection
 from django.core.mail import send_mail,BadHeaderError
+from . import models
 
 # Create your views here.
 def index(request):
