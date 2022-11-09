@@ -1,7 +1,7 @@
 
 from django.shortcuts import render,redirect
 from django.http import FileResponse
-from django.db import connection, close_old_connections
+from django.db import connection, close_old_connections,connections
 from django.core.mail import send_mail,BadHeaderError
 
 # Create your views here.
@@ -122,8 +122,9 @@ def index(request):
             print("none posted")
 
 
+        connections.close_all() 
         close_old_connections()
-        cursor.close()   
+        cursor.close()  
         return render(request, "pp/index.html",context)
 
     return render(request, "pp/index.html",context)

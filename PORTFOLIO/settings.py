@@ -82,7 +82,8 @@ DATABASES = {
     'USER':'zslxiaoi',
     'PASSWORD':'codkc8v-KfJs_W-ipT46NM51m0Eh--P6', 
     'HOST':'surus.db.elephantsql.com',
-    'PORT': '5432'
+    'PORT': '5432',
+    'CONN_MAX_AGE': 0,
     }
 }
 
