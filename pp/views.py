@@ -19,7 +19,9 @@ def index(request):
         linkid = (request.POST['ldp'])
         title = (request.POST['title'])
         review = (request.POST['review'])
-        
+        if linkid=='':
+            linkid = 'NULL'
+            
         cursor = connection.cursor()    
         try:
             cursor.execute("insert into pp_reviewsss(name,linkedin,title,review) values(%s,%s,%s,%s);",(name,linkid,title,review,))
