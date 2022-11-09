@@ -27,10 +27,60 @@ body{
     scroll-behavior: smooth;
     /* scroll-snap-type: y mandatory; */
 }
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     width: 0;
     height: 0;
+} */
+
+/*############################ My PreLoader*/
+.preloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 20;
+    background:silver ;
 }
+
+.preloader > div > h1{
+    color: var(--red);
+    font-weight: bold;
+    font-size: 18vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+.loads{
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;  
+    z-index: 100000;
+    grid-gap: 5px;
+}
+
+.loader-ele{
+    border-radius: 100%;
+    border: 6px solid var(--blue);
+    margin: calc(10px *2);
+}
+.loader-ele:nth-child(1) {
+    animation: pre-loaders .6s ease-in-out alternate infinite;
+}
+.loader-ele:nth-child(2) {
+    animation: pre-loaders .6s ease-in-out alternate .2s infinite;
+}
+    
+.loader-ele:nth-child(3) {
+    animation: pre-loaders .6s ease-in-out alternate .4s infinite;
+}
+
 /* ########################## pre loadere ###################################*/
 #pre-loader{
     background:silver ;
@@ -75,17 +125,17 @@ margin: calc(10px *2);
 }
 
 .loader__element:nth-child(1) {
-animation: preloader .6s ease-in-out alternate infinite;
+animation: pre-loaders .6s ease-in-out alternate infinite;
 }
 .loader__element:nth-child(2) {
-animation: preloader .6s ease-in-out alternate .2s infinite;
+animation: pre-loaders .6s ease-in-out alternate .2s infinite;
 }
 
 .loader__element:nth-child(3) {
-animation: preloader .6s ease-in-out alternate .4s infinite;
+animation: pre-loaders .6s ease-in-out alternate .4s infinite;
 }
 
-@keyframes preloader {
+@keyframes pre-loaders {
 100% { transform: scale(2); }
 }
 /* ########################## pre loadere ###################################*/
@@ -674,6 +724,10 @@ a{
 }
 
 /* ##############################footer css ########################### */
+.test{
+    width: 100vw;
+    border: 2px solid red;
+}
 
 .footer-distributed{
     background: #596470;
@@ -686,7 +740,7 @@ a{
     padding-bottom: 10px;
     padding-top: 10px;
     padding-right: 30px;
-    padding-left: 90px;
+    padding-left: 30px;
 
     /* margin-left: 80px; */
     z-index: -1;
@@ -954,9 +1008,12 @@ a{
     border: 0;
     aspect-ratio: 1;
     top: 2rem;
-    right: 2rem;
+    right: 3rem;
     background-position: center;
     cursor: pointer;
+}
+.LT-inner{
+    margin: 0px 20px 20px 20px;
 }
 .LT-inner > h3{
     text-align: center;
@@ -1211,3 +1268,15 @@ label{
         grid-gap: 0px !important;
     }
 }
+
+@media (max-width:500px){
+    .footer-distributed{
+        background-color:unset;
+    }
+}
+
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */

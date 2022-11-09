@@ -45,7 +45,7 @@
     --gap: 2em;
 
     position: fixed;
-    z-index: 1000;
+    z-index: 8;
     inset: 0 0 0 30%;
 
     flex-direction: column;
@@ -58,9 +58,9 @@
     transform: translateX(20%);
   }
   .mobile-nav-toggle {
-    z-index: 9999;
+    z-index: 10;
     display: block;
-    position: absolute;
+    /* position: absolute; */
     background-color: transparent;
     background: url("../images/navopen.svg");
 
@@ -68,8 +68,10 @@
     width: 3rem;
     border: 0;
     aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
+    position: fixed;
+    right: 10px;
+    /* top: 2rem; */
+    /* right: 2rem; */
   }
   .mobile-nav-toggle[aria-expanded="true"] {
     background: url("../images/navclose.svg");

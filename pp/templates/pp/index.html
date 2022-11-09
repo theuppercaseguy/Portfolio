@@ -24,8 +24,7 @@
   </head>
 
   <body>
-
-    <div id="pre-loader">
+    <!-- <div id="pre-loader">
       <div class="flex1">
         <div class="head">
           <h1>S.K</h1>
@@ -37,9 +36,18 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
     
     <div id="particles-js"></div>
+
+    <div class="preloader">
+      <div><h1>S.K</h1></div>
+      <div class="loads">
+        <span class="loader-ele"></span>
+        <span class="loader-ele"></span>
+        <span class="loader-ele"></span>
+      </div>
+    </div>
 
     <div id="shorcuts">
       <div class="scroll-buttons-container">
@@ -84,6 +92,7 @@
     </div>
 
     <div class="" id="root">
+      
       <header class="primary-header flex border-line header-grid-item">
         <div id="header-logo" class="border-line">
           <a href="#"><h1 class="logo">Saad Khan</h1></a>
@@ -312,6 +321,10 @@
       </div>
     </div>
 
+    <!-- <div class="test">
+      <h2>qewrty</h2>
+    </div> -->
+    
     <footer class="foot footer-distributed reveal">
       <div class="footer-left">
         <h3>
@@ -389,7 +402,11 @@
         </div>
       </div>
     </footer>
-
+    
+    <!-- <div class="test">
+      <h2>qewrty</h2>
+    </div> -->
+    
     <div class="LT">
       <div class="LT-inner">
         <div class="close-lt" onclick="slideup()"></div>
@@ -454,7 +471,9 @@
     </div>
 
     <script>
-      var loader = document.getElementById("pre-loader");
+      // var loader = document.getElementById("pre-loader");
+      var loader1 = document.querySelector(".preloader");
+      var particle= document.querySelector("#particles-js");
 
       var title_text = document.querySelector(".title-text");
       var portfolio = document.querySelector(".portfolio");
@@ -475,9 +494,14 @@
       var rsb2 = document.querySelector("#lets-talk-side-btt");
 
       window.addEventListener("load", () => {
-        loader.style.transition = "all 1s"
-        loader.style.transform = "translateY(-1100px)"
-        loader.style.zIndex = "-12";
+        // loader.style.transition = "all 1s"
+        // loader.style.transform = "translateY(-1100px)"
+        // loader.style.zIndex = "-12";
+        
+        loader1.style.transition = "all 1s"
+        loader1.style.transform = "translate(10px, -1100px)"
+        loader1.style.zIndex = "-12";
+
         // loader.style.display = "none";
 
         title_text.classList.add("title-text-animation");
@@ -496,14 +520,16 @@
         scrol_btts.classList.add("inc_opacity");
 
       });
-
+      particle.style.zIndex = "-2"
       setTimeout(function(){
-        var pre_loader=document.querySelector("#pre-loader");
+        var pre_loader=document.querySelector(".preloader");
         pre_loader.remove();
-      },30000)
+      },15000)
 
 
 
     </script>
+
   </body>
+  
 </html>
