@@ -90,9 +90,12 @@ def index(request):
                 cursor.execute("insert into pp_reviewsss(name,linkedin,title,review) values(%s,%s,%s,%s);",(name,linkid,title,review,))
                 connection.commit()
             except Exception as e:
+                connections.close_all() 
+                close_old_connections()
                 cursor.close()
                 pass
-            
+
+            connections.close_all() 
             close_old_connections()
             cursor.close()
             return redirect("/")
@@ -109,9 +112,11 @@ def index(request):
             try:        
                 cursor.execute('insert into pp_letstalk(name,company_name,company_email,message) values(%s,%s,%s,%s)',(name,companyName,email,message))
             except Exception as e:
-                # cursor.close()
+                connections.close_all()
+                cursor.close()
                 pass
-
+            
+            connections.close_all()
             close_old_connections()
             cursor.close()
             return redirect('/')
