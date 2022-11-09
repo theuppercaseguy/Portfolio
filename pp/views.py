@@ -19,7 +19,8 @@ def index(request):
         linkid = (request.POST['ldp'])
         title = (request.POST['title'])
         review = (request.POST['review'])
-        if linkid=='':
+        
+        if linkid=='' or linkid=='NULL' or linkid=='null' or 'Null':
             linkid = 'NULL'
 
         cursor = connection.cursor()    
@@ -61,7 +62,6 @@ def index(request):
 
 
 def pdf_download(request):
-    
     return FileResponse(open('Resume-Saad-Khan.pdf','rb'),as_attachment=True,content_type='application/pdf')
 
 
