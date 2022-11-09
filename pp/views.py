@@ -1,7 +1,7 @@
 
 from django.shortcuts import render,redirect
 from django.http import FileResponse
-from django.db import connection
+from django.db import connection, close_old_connections
 from django.core.mail import send_mail,BadHeaderError
 
 # Create your views here.
@@ -12,6 +12,7 @@ def index(request):
     cursor.execute("select * from   pp_reviewsss where turnonn = 'true' order by priority desc  ;  ")
     context = {"data":cursor.fetchall(),}
     # cursor.close()
+    
 
     if request.POST.get('review-post',False) == "review-post":# == 'review-post':
         print("review request posted")
@@ -32,7 +33,8 @@ def index(request):
         except Exception as e:
             # cursor.close()
             pass
-            
+        
+        close_old_connections()
         cursor.close()
         return redirect("/")
 
@@ -51,14 +53,17 @@ def index(request):
             # cursor.close()
             pass
 
+        close_old_connections()
         cursor.close()
         return redirect('/')
 
     else:
+        close_old_connections()
         cursor.close()
         print("none posted")
 
 
+    close_old_connections()
     cursor.close()   
     return render(request, "pp/index.html",context)
 
