@@ -21,7 +21,7 @@ def index(request):
         review = (request.POST['review'])
         if linkid=='':
             linkid = 'NULL'
-            
+
         cursor = connection.cursor()    
         try:
             cursor.execute("insert into pp_reviewsss(name,linkedin,title,review) values(%s,%s,%s,%s);",(name,linkid,title,review,))
@@ -34,39 +34,29 @@ def index(request):
         return redirect("/")
 
     elif request.POST.get('letstalk-post',False) == "letstalk-post":
-        subject = "portfolio review submitted"
-        body = {
-            "Name":request.POST['Full-Name'],
-            "companyName":request.POST['Company-Name'],
-            "company_email":request.POST['email'],
-            "message":request.POST['Message'],
-        }
-        message = "\n".join(body.values())
+        name = request.POST['Full-Name']
+        companyName = request.POST['Company-Name']
+        email = request.POST['email']
+        message = request.POST['Message']
         
-        try:
-            success = send_mail(
-                subject,
-                message,
-                'saadan060@gmail.com',
-                ['saadan060@gmail.com',],
-                fail_silently=False,
-                auth_password='lucifermorningstar',
-            )
-            print(f"success value is: {success}")
-            print("sending message")
-        except BadHeaderError as e:
-            print(f"email not send,error:{e}")
-            
-        
-        
-        print("lets talk request posted")
 
+        print("lets talk request posted")
+        cursor = connection.cursor()
+        try:        
+            cursor.execute('insert into pp_letstalk(name,company_name,company_email,message) values(%s,%s,%s,%s)',(name,companyName,email,message))
+        except Exception as e:
+            cursor.close()
+
+        cursor.close()
         return redirect('/')
 
     else:
         print("none posted")
 
-
+    print(cursor)
+    cursor.close()
+    print(cursor)
+   
     return render(request, "pp/index.html",context)
 
 
