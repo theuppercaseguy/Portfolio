@@ -75,6 +75,8 @@ def index(request):
     cursor = connection.cursor()
     cursor.execute("select * from pp_reviewsss where turnonn = 'true' order by priority desc;")
     context = {"data":cursor.fetchall(),}
+    print(context)
+
     cursor.close()
 
     if request.POST.get('review-post',False) == "review-post":# == 'review-post':
