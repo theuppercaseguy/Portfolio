@@ -96,7 +96,7 @@ body::-webkit-scrollbar{
 /* ##########background CSS############### */
 #particles-js{
     width: 100%;
-    height: 100%;
+    height: 115%;
     position: fixed;
     background: #505b66;
     z-index: -1;
@@ -109,7 +109,7 @@ canvas {
 .background{
     z-index: -3;
     width: 100%;
-    height: 1005;
+    height: 115%;
     background-color: #505b66;
     position: fixed;
 }
