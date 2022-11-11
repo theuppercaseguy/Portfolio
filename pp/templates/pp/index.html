@@ -38,7 +38,7 @@
       </div>
     </div> -->
     
-    <div id="particles-js"></div>
+    <div id="particles-js" class="background"></div>
 
     <div class="preloader">
       <div><h1>S.K</h1></div>
@@ -471,9 +471,10 @@
     </div>
 
     <script>
+
+      var particle= document.querySelector("#particles-js");
       // var loader = document.getElementById("pre-loader");
       var loader1 = document.querySelector(".preloader");
-      var particle= document.querySelector("#particles-js");
 
       var title_text = document.querySelector(".title-text");
       var portfolio = document.querySelector(".portfolio");
@@ -493,16 +494,21 @@
       var rsb1 = document.querySelector("#resume-side-btt");
       var rsb2 = document.querySelector("#lets-talk-side-btt");
 
+      window.addEventListener("resize", function() {
+        var canva = document.querySelector('canvas');
+        if (window.innerWidth <= 500){ 
+          canva.style.display = 'none';
+        }
+        else if(window.innerWidth >500){
+          canva.style.display = 'block';
+        };
+      });
+
       window.addEventListener("load", () => {
-        // loader.style.transition = "all 1s"
-        // loader.style.transform = "translateY(-1100px)"
-        // loader.style.zIndex = "-12";
         
         loader1.style.transition = "all 1s"
         loader1.style.transform = "translate(10px, -1100px)"
         loader1.style.zIndex = "-12";
-
-        // loader.style.display = "none";
 
         title_text.classList.add("title-text-animation");
         portfolio.classList.add("portfolio-animation");
@@ -520,13 +526,12 @@
         scrol_btts.classList.add("inc_opacity");
 
       });
-      particle.style.zIndex = "-2"
       setTimeout(function(){
         var pre_loader=document.querySelector(".preloader");
         pre_loader.remove();
       },15000)
 
-
+      
 
     </script>
 
