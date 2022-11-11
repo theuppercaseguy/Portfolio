@@ -115,7 +115,7 @@ canvas {
 }
 
 .border-line{
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 #root{
@@ -223,14 +223,13 @@ canvas {
     0 0 20px var(--blue),
     0 0 40px var(--blue),
     0 0 80px var(--blue),
-    0 0 160px var(--blue);
-    
+    0 0 160px var(--blue);    
 }
 
 #header-logo{
     grid-template-columns: 1 / 1;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     margin: 0%;
     padding: 0%;
     display: flex;
