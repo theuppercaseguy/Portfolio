@@ -23,7 +23,6 @@ function slidedown(){
 }
 
 function inc_scroll_size(button){
-    // alert("asdf");
     const barslist = document.querySelectorAll('.scrol-btts');
     console.log(barslist);
 
@@ -90,10 +89,7 @@ function inc_scroll_size(button){
 
 }
 
-
-
 function scroll_section(section){
-    // console.log(section);
     $(document).ready(function() { 
         document.location.href='#'.concat(section);
     });
@@ -103,6 +99,3 @@ function down_scroll_click(){
     $('html, body').animate({scrollTop: $(document).height()}, 'slow');
     return false;
 }
-
-
-

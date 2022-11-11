@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0" />
     <title>Saad Khan PortFolio</title>
     <link rel="stylesheet" href="{% static 'pp/css/index.css' %}" />
     <link
@@ -16,27 +16,14 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.7.1.min.js"
     ></script>
-    <script defer src="{% static 'pp/js/nav-bar.js' %}"></script>
+    <script async defer src="{% static 'pp/js/nav-bar.js' %}"></script>
     <script defer src="{% static 'pp/js/particles.js' %}"></script>
     <script defer src="{% static 'pp/js/app.js' %}"></script>
-    <script src="{% static 'pp/js/index.js' %}"></script>
-    <script defer src="{% static 'pp/js/all.js' %}"></script>
+    <script async src="{% static 'pp/js/index.js' %}"></script>
+    <script async defer src="{% static 'pp/js/all.js' %}"></script>
   </head>
 
   <body>
-    <!-- <div id="pre-loader">
-      <div class="flex1">
-        <div class="head">
-          <h1>S.K</h1>
-        </div>
-        <div class="loader">
-          <span class="loader__element"></span>
-          <span class="loader__element"></span>
-          <span class="loader__element"></span>
-        </div>
-
-      </div>
-    </div> -->
     
     <div id="particles-js" class="background"></div>
 
@@ -79,16 +66,6 @@
         </ul>
       </div>
       
-      <!-- <div class="right-side-btts">
-        <a href="{% url 'pp:resume_download' %}" target="_blank"><span id="resume-side-btt">RS</span></a>
-      </div>
-
-      <div class="right-side-btts">
-        <div onclick="slidedown()" class="">
-          <span id="lets-talk-side-btt">LT</span>
-        </div>
-      </div> -->
-
     </div>
 
     <div class="" id="root">
@@ -320,10 +297,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="test">
-      <h2>qewrty</h2>
-    </div> -->
     
     <footer class="foot footer-distributed reveal">
       <div class="footer-left">
@@ -403,10 +376,6 @@
       </div>
     </footer>
     
-    <!-- <div class="test">
-      <h2>qewrty</h2>
-    </div> -->
-    
     <div class="LT">
       <div class="LT-inner">
         <div class="close-lt" onclick="slideup()"></div>
@@ -473,7 +442,6 @@
     <script>
 
       var particle= document.querySelector("#particles-js");
-      // var loader = document.getElementById("pre-loader");
       var loader1 = document.querySelector(".preloader");
 
       var title_text = document.querySelector(".title-text");

@@ -27,10 +27,10 @@ body{
     scroll-behavior: smooth;
     /* scroll-snap-type: y mandatory; */
 }
-/* body::-webkit-scrollbar{
+body::-webkit-scrollbar{
     width: 0;
     height: 0;
-} */
+}
 
 /*############################ My PreLoader*/
 .preloader{
@@ -92,8 +92,6 @@ body{
 }
 .flex1{
     display:inline-block;
-    /* justify-content: center;
-    align-items: center; */
     position: relative;
     height: 100%;
     width: 100%;
@@ -147,9 +145,9 @@ animation: pre-loaders .6s ease-in-out alternate .4s infinite;
 }
 .sr-only{
     border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	clip: rect(1px, 1px, 1px, 1px) !important; 
 	-webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;  /* 2 */
+    clip-path: inset(50%) !important; 
 	height: 1px !important;
 	margin: -1px !important;
 	overflow: hidden !important;
@@ -188,8 +186,6 @@ canvas {
     display: grid;
     grid-template-columns: minmax(20px,80px) 5fr minmax(20px,80px) ;
     grid-template-rows: minmax(100px,150px) 5fr ;
-    /* height: 100%; */
-    /* width: 100%; */
     grid-gap: 5px;
 }
 
@@ -226,8 +222,6 @@ canvas {
     margin-bottom: 30px;
     cursor: pointer;
     border-radius: 10px;
-    /* opacity: 0; */
-    /* animation: dec-scroll-size 0.3s ease-out 0s 0s forwards normal; */
 }
 .inc-size{
     animation: inc-scroll-size 0.3s ease-out 1 0s forwards normal;
@@ -314,7 +308,6 @@ canvas {
     font-weight:100;
     padding-inline-start: 10px;   
     animation: top-slidein 1s ease 0s 1 normal forwards ;   
-    /* animation: left-slide-in 1.25s ease 0s 1 normal forwards; */
 }
 
 a{
@@ -480,10 +473,6 @@ a{
     margin-bottom: 1.6rem;
     font-family: "futura_m";
     font-weight: normal;
-    /* text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5); */
-    /* transform: translateX(0%) translateZ(0px); */
-    /* border: 2px solid red; */
-    /* animation-play-state: running; */
 }
 .title-text-animation{
     animation: left-slide-in 1s ease-in 0s 1 normal forwards;
@@ -504,7 +493,6 @@ a{
 .resume-button{
     position: relative;
     top: 11em;
-    /* left:20%; */
     display: flex;
     flex-wrap: wrap;
 }
@@ -528,7 +516,6 @@ a{
 }
 .resume-button a:hover{
     color: #000;
-    /* transition-delay: 1.5s; */
     background-color: var(--green);
 
     box-shadow: 0 0 10px var(--green),
@@ -550,8 +537,6 @@ a{
 
 .talk-button a{
     border: 2px solid var(--blue);
-    /* margin-left: clamp(30%,50%,50%) */
-    /* width: 108px; */
     margin-left: clamp(25%,40%,50%);
 }
 .talk-button a span{
@@ -618,7 +603,6 @@ a{
 #section-about{
     min-height: 100vh;
     scroll-snap-align: center;
-    /* border: 2px solid red; */
 }
 #section-about h1{
     color: var(--heading-white);
@@ -644,7 +628,6 @@ a{
     padding-right: max(15%);;
 }
 .inner-left p{
-    /* border: 2px solid red; */
     min-width: 30vw;
     max-width: 440px;
     color: #bfd2d5;
@@ -663,7 +646,6 @@ a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;    
-    /* padding-left: 0%; */
 }
 .inner-left ul li{
     color: var(--green);
@@ -688,12 +670,7 @@ a{
     height: 100%;
     width: 100%;
     width: max(87%);
-    /* background-color:#ff4d5a; */
     margin-right: 13%;
-    /* background-color: #ff4d5a; */
-    /* color: red; */
-    /* animation: reveal-right 1s ease-out 0s infinite forwards normal; */
-    /* animation: reveal-right 1s ease-out 0s 1 normal forwards; */
 }
 
 #section-projects{
@@ -746,10 +723,7 @@ a{
     padding-top: 10px;
     padding-right: 90px;
     padding-left: 90px;
-
-    /* margin-left: 80px; */
     z-index: -1;
-    /* margin-right: 80px; */
     position: absolute;
     border-radius: 5px;
 }
@@ -890,7 +864,6 @@ a{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	/* background-color:  #33383b; */
 	border-radius: 2px;
 
 	font-size: 20px;
@@ -977,7 +950,6 @@ a{
 }
 /* ##############################footer css completed ########################### */
 .LT{
-    /* display: block; */
     background-color: #596470;
     border-radius: 4px;
     
@@ -990,7 +962,6 @@ a{
     left: 50%;
     transform: translateX(-50%);
     transform: translate(-50%,-1000px);
-    /* box-shadow: 0 15px 25px -15px rgb(0 0 0 / 60%); */
 }
 .close-up{
     animation: slide-up 0.6s ease-out 0s 1 forwards normal;
@@ -1004,7 +975,7 @@ a{
     
 }
 .close-lt{
-    /* display: block; */
+
     position: absolute;
     background-color: transparent;
     background: url("../images/navclose.svg");
@@ -1245,7 +1216,6 @@ label{
         padding: 0 0 0 0;   
     }
     .inner-left p{
-        /* width: unset !important; */
         min-width: none !important;
         max-width: none !important;
         padding: 0 4% 0 4%;
