@@ -47,7 +47,7 @@
     padding: 0;
     color: var(--green);
     text-transform: capitalize;   
-    font-size: 13px;
+    /* font-size: 13px; */
     font-family:  "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     font-weight: 400;
 }
@@ -93,6 +93,7 @@
     margin: 5px 0px 5px !important;
     padding-inline: 3px;
     z-index: 2;
+    flex-wrap: wrap;
 }
 .tech-list > li{
     color: var(--green);

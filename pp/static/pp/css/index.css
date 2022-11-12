@@ -115,7 +115,7 @@ canvas {
 }
 
 .border-line{
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 #root{
@@ -343,10 +343,9 @@ a{
 /* ####################################### MAIN SECTIONS #############################################*/
 #section-home{
     height: calc(100vh - 100px);
-    width: 100%;
     display: flex;
-
-    justify-content: center;
+    /* width: 100%; */
+    /* justify-content: center; */
 }
 .title{
     color: #fff;
@@ -812,8 +811,10 @@ a{
     transition: all 0.25s ease-in;
 }
 /* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
+.overy-auto{
+    overflow-y: auto;
+}
+@media (max-width: 700px) {
 
 	.footer-distributed{
 		font: bold 14px sans-serif;
@@ -1081,6 +1082,11 @@ label{
     100%{opacity: 1;}      
 }
 
+@media (max-width:400px){
+    .inner-left ul{
+        display: block !important;
+    }
+}
 
 
 @media (max-width:700px){
@@ -1097,23 +1103,24 @@ label{
     #section-home{
         display: inline-grid;
         height: unset;
+        padding-left: 15vw;
     }
     .title{
         padding:0 0 0 0;
         height: fit-content;
     }
     .title-text{
-        font-size: 6rem;
+        font-size: 15vw
     }
     .title-below-para{
-        font-size: 1.9rem;
+        font-size: 7vw;
     } 
     .hero-right-side{
-        padding: 0 0 0 0;
-
+        padding: 0 0 0 0;  
     }
     .portfolio{
         top: 5%;
+        font-size: 7vw;
     }
     .resume-button{
         top: 0em;
@@ -1132,6 +1139,16 @@ label{
     .videowrapper{
         filter: none;
     }
+    .socials-left-side-bar{
+        display: none;
+    }
+    .inner-left ul{
+        display: inline-grid;
+    }
+    .inner-left ul li{
+        min-width: 44vw;
+        font-size: 4vw;
+    }
 }
 
 
@@ -1143,8 +1160,8 @@ label{
         padding: 0 0 0 0;   
     }
     .inner-left p{
-        min-width: none !important;
-        max-width: none !important;
+        min-width: unset !important;
+        max-width: unset !important;
         padding: 0 4% 0 4%;
     }
     .inner-right{
@@ -1175,7 +1192,7 @@ label{
 @media (max-width:500px){
     .footer-distributed{
         background-color:unset;
-        padding: 0 0px 0px 10%;
+        padding: 0 10% 0px 10%;
     }
 }
 
