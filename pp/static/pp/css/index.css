@@ -345,7 +345,7 @@ a{
     height: calc(100vh - 100px);
     display: flex;
     /* width: 100%; */
-    /* justify-content: center; */
+    justify-content: center;
 }
 .title{
     color: #fff;
@@ -1114,6 +1114,7 @@ label{
     }
     .title-below-para{
         font-size: 7vw;
+        margin-bottom: 0px;
     } 
     .hero-right-side{
         padding: 0 0 0 0;  
@@ -1121,6 +1122,7 @@ label{
     .portfolio{
         top: 5%;
         font-size: 7vw;
+        margin-top: 0px;
     }
     .resume-button{
         top: 0em;
