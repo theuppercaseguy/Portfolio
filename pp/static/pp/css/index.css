@@ -115,7 +115,7 @@ canvas {
 }
 
 .border-line{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 #root{
@@ -1151,6 +1151,11 @@ label{
     }
 }
 
+@media (max-width:830px){
+    .hero-right-side {
+        padding-right: unset;
+    }
+}
 
 @media (max-width:950px){
     .about-inner{
