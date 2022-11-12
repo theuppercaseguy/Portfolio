@@ -813,6 +813,12 @@ a{
 /* If you don't want the footer to be responsive, remove these media queries */
 .overy-auto{
     overflow-y: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+.overy-auto::-webkit-scrollbar{
+    /* overflow-y: auto; */
+    display: none;
 }
 @media (max-width: 700px) {
 
