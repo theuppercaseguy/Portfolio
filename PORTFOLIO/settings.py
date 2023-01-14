@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3vvuy1+!m9_2ym8*#(2n9hv&2o-ik$pk9!qbvrvd(*cz@w*jx%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vercel.app','now.sh']
 
 
 # Application definition
@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build","static")
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
@@ -155,5 +155,5 @@ AWS_SES_REGION_NAME = 'us-east-1' #(ex: us-east-2)
 AWS_SES_REGION_ENDPOINT ='email.us-east-1.amazonaws.com' #(ex: email.us-east-2.amazonaws.com)
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
