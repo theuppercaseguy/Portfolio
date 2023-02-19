@@ -130,7 +130,7 @@
     padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0px;
-    filter: grayscale(70%) contrast(1) brightness(85%); 
+    /* filter: grayscale(70%) contrast(1) brightness(85%);  */
 }
 .videowrapper:hover{
     filter: none;
