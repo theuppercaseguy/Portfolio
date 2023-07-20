@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3vvuy1+!m9_2ym8*#(2n9hv&2o-ik$pk9!qbvrvd(*cz@w*jx%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = True
+#DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
 
 
 # Application definition
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'PORTFOLIO.urls'
@@ -122,7 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS=[
@@ -141,20 +142,7 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'django_ses.SESBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '5432'
-EMAIL_HOST_USER = 'saadan060@gmail.com'
-EMAIL_HOST_PASSWORD = 'lucifermorningstar'
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
 
 
-AWS_ACCESS_KEY_ID = 'AKIARSDMIO6TXGDMI2VD'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_SES_REGION_NAME = 'us-east-1' #(ex: us-east-2)
-AWS_SES_REGION_ENDPOINT ='email.us-east-1.amazonaws.com' #(ex: email.us-east-2.amazonaws.com)
-
-
-django_heroku.settings(locals())
-
+# Add whitenoise configuration
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
