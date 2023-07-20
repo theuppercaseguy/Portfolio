@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'PORTFOLIO.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-'''
+
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql',
@@ -88,7 +88,7 @@ DATABASES = {
     'CONN_MAX_AGE': 0,
     }
 }
-'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
