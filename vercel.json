@@ -10,10 +10,7 @@
         },
         {
             "src": "build_files.sh",
-            "use": "@vercel/python",
-            "config": {
-                "distDir": "staticfiles"
-            }
+            "use": "@vercel/python"
         }
     ],
     "routes": [
