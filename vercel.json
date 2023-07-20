@@ -14,16 +14,16 @@
             "config": {
                 "distDir": "staticfiles"
             }
-        },
+        }
     ],
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/static/$1/"
+            "dest": "static/$1/"
         },
         {
             "src": "/(.*)",
             "dest": "PORTFOLIO/wsgi.py"
-        },
+        }
     ]
 }
