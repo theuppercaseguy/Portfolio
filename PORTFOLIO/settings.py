@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3vvuy1+!m9_2ym8*#(2n9hv&2o-ik$pk9!qbvrvd(*cz@w*jx%
 #DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app','.now.sh']
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app','.now.sh','*']
 
 
 # Application definition
@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'PORTFOLIO.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+'''
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql',
@@ -88,6 +88,7 @@ DATABASES = {
     'CONN_MAX_AGE': 0,
     }
 }
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
