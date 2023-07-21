@@ -4,7 +4,7 @@
 <script defer  src="{% static 'pp/js/all.js' %}"></script>
 
 
-<nav>
+<nav role="navigation">
     <ul id="primary-navigation"  class="primary-navigation flex" data-visible="false">
         <li class="active">
             <a href="#section-home" onclick="inc_scroll_size('bt1'), scroll_section('primary-navigation')">
@@ -12,17 +12,17 @@
             </a>
         </li>
         <li>
-            <a href="#section-about" onclick="inc_scroll_size('bt2')">
+            <a href="#section-about" onclick="inc_scroll_size('bt2')" rel="noopener">
                 <span aria-hidden="true">01</span> About
             </a>
         </li>
         <li>
-            <a href="#section-projects" onclick="inc_scroll_size('bt3')">
+            <a href="#section-projects" onclick="inc_scroll_size('bt3')" rel="noopener">
                 <span aria-hidden="true">02</span> Projects
             </a>
         </li>
         <li>
-            <a href="#" onclick="down_scroll_click(), inc_scroll_size('bt4')">
+            <a href="#" onclick="down_scroll_click(), inc_scroll_size('bt4')" rel="noopener">
                 <span aria-hidden="true">03</span> Contact
             </a>
         </li>

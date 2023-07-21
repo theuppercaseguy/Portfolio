@@ -5,10 +5,11 @@
 
 <!-- <h3>Write a Testimonial</h3> -->
 <section class="testimonials ">
+    
     <div class="writtenT ">
         <div class="swiper">
             <div class="swiper-wrapper">
-                
+
                 {% for i,name,id,priority,title,review,turnonn in data %}
 
                 <div class="swiper-slide overy-auto">
@@ -19,21 +20,23 @@
                             <p>{{review}}</p>
                             <div class="details">
                                 {% if id != "NULL"%}
-                                
-                                <h3> <a target="_blank" href="{{id}}" class="hover-underline-animation"> {{name}} </a><span><br> {{title}}</span></h3>
-                                
+
+                                <h3> <a target="_blank" href="{{id}}" class="hover-underline-animation"> {{name}}
+                                    </a><span><br> {{title}}</span></h3>
+
                                 {%else%}
-                                
-                                <h3> <a href="" class="hover-underline-animation"> {{name}} </a><span><br> {{title}}</span></h3>
+
+                                <h3> <a href="" class="hover-underline-animation"> {{name}} </a><span><br>
+                                        {{title}}</span></h3>
 
                                 {%endif%}
-                            
+
                             </div>
                         </div>
                     </div>
 
                 </div>
-                
+
 
                 {% endfor %}
             </div>
@@ -42,8 +45,8 @@
 
 
 
-        <script  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script >
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
             var swiper = new Swiper('.swiper', {
                 effect: 'coverflow',
                 grabCursor: true,
@@ -67,31 +70,33 @@
     <div class="writeT">
         <div class="login-box">
             <h2>Write a Review</h2>
-            
-            <form  method="post">
+
+            <form method="post">
                 {% csrf_token %}
 
                 <div class="user-box">
-                    <input type="text" name="name" maxlength="20" required="true">
+                    <input type="text" name="name" maxlength="20" required>
                     <label>Full Name</label>
                 </div>
+
                 <div class="user-box">
-                    
-                    <input type="text" name="ldp" maxlength="50" required="false">
+                    <input type="url" name="ldp" maxlength="50" >
                     <label>Linked In(Optional)</label>
                 </div>
+                
                 <div class="user-box">
-                    <input type="text" name="title" maxlength="20" required="true">
+                    <input type="text" name="title" maxlength="20" required>
                     <label>Title</label>
                 </div>
+                
                 <div class="user-box">
-                    <input type="text" name="review" maxlength="2000" required="true">
+                    <input type="text" name="review" maxlength="2000" required>
                     <label>Review (2000 char)</label>
                 </div>
-                
 
 
-                <a type="post" >
+
+                <a type="post">
                     <span></span>
                     <span></span>
                     <span></span>

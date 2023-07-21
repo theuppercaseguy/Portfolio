@@ -52,7 +52,6 @@
     height: 2px;
     background-color: #7e7d7d;
     top: 50%;
-    margin-bottom: 20px;
     transform: translateY(-50%);
     z-index: 0;
 }

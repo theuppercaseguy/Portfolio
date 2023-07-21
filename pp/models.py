@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 class Reviewsss(models.Model):
     name = models.CharField(max_length = 30, null = False)
-    linkedin = models.CharField(max_length = 30, default = "NULL")
+    #linkedin = models.CharField(max_length = 60, default = "NULL")
+    linkedin = models.TextField()
     title = models.CharField(max_length = 50, null = False,default = "title")
     review = models.TextField()
     priority = models.IntegerField(default = 0,null=True)

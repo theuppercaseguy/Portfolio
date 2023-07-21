@@ -1,17 +1,88 @@
 #more-projects {
     /* Set appropriate width and height for the container */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#more-projects ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.more-projects > ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
+
+.more-projects > ul > li {
+    /* Set each project to take about 80% of the screen width and 400px height */
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-container {
+    display: flex;
+}
+
+.project-info {
+    width: 65%;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.project-video {
+    /* width: 70%; */
+    /* Set the width and height of the video container */
+    width: 35%;
+    height: 100%;
+    position: relative;
+}
+
+.project-video iframe {
+    /* Adjust video size to fill the container */
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.project-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.project-links {
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .borderss {
     border: 2px solid black !important;
@@ -36,23 +107,12 @@
 
 }
 
-
 .line {
     position: absolute;
     width: 100%;
     height: 2px;
     background-color: #7e7d7d;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 0;
-}
-.line-2 {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: #7e7d7d;
-    top: 50%;
-    margin-bottom: 20px;
     transform: translateY(-50%);
     z-index: 0;
 }

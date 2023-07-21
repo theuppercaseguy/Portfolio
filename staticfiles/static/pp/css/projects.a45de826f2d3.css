@@ -1,18 +1,3 @@
-#more-projects {
-    /* Set appropriate width and height for the container */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#more-projects ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 .borderss {
     border: 2px solid black !important;
 }
@@ -36,23 +21,12 @@
 
 }
 
-
 .line {
     position: absolute;
     width: 100%;
     height: 2px;
     background-color: #7e7d7d;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 0;
-}
-.line-2 {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: #7e7d7d;
-    top: 50%;
-    margin-bottom: 20px;
     transform: translateY(-50%);
     z-index: 0;
 }

@@ -15,63 +15,38 @@ def index(request):
         context = {"data":cursor.fetchall(),}
     
 
-        if request.POST.get('review-post',False) == "review-post":# == 'review-post':
-            print("review request posted")
-            name = (request.POST['name'])
-            linkid = (request.POST['ldp'])
-            title = (request.POST['title'])
-            review = (request.POST['review'])
-            
-            if linkid=='' or linkid=='NULL' or linkid=='null' or 'Null':
-                linkid = 'NULL'
+        if request.method == "POST":
+            if "review-post" in request.POST:
+                name = request.POST.get("name")
+                linkid = request.POST.get("ldp")
+                print("/n/n Hello word: ",linkid)
+                title = request.POST.get("title")
+                review = request.POST.get("review")
+                if linkid in ('', 'NULL', 'null', 'Null'):
+                    linkid = None
 
-            try:
-                cursor.execute("insert into pp_reviewsss(name,linkedin,title,review) values(%s,%s,%s,%s);",(name,linkid,title,review,))
-                connection.commit()
-            except Exception as e:
-                connections.close_all() 
-                close_old_connections()
-                cursor.close()
-                pass
+                try:
+                    cursor.execute("INSERT INTO pp_reviewsss (name, linkedin, title, review) VALUES (%s, %s, %s, %s);", (name, linkid, title, review))
+                    connection.commit()
+                except Exception as e:
+                    pass
 
-            connections.close_all() 
-            close_old_connections()
-            cursor.close()
-            return redirect("/")
+                return redirect("/")
 
-        elif request.POST.get('letstalk-post',False) == "letstalk-post":
-            name = request.POST['Full-Name']
-            companyName = request.POST['Company-Name']
-            email = request.POST['email']
-            message = request.POST['Message']
-            
+            elif "letstalk-post" in request.POST:
+                name = request.POST.get("Full-Name")
+                companyName = request.POST.get("Company-Name")
+                email = request.POST.get("email")
+                message = request.POST.get("Message")
 
-            print("lets talk request posted")
-            # cursor = connection.cursor()
-            try:        
-                cursor.execute('insert into pp_letstalk(name,company_name,company_email,message) values(%s,%s,%s,%s)',(name,companyName,email,message))
-            except Exception as e:
-                connections.close_all()
-                cursor.close()
-                pass
-            
-            connections.close_all()
-            close_old_connections()
-            cursor.close()
-            return redirect('/')
+                try:
+                    cursor.execute('INSERT INTO pp_letstalk (name, company_name, company_email, message) VALUES (%s, %s, %s, %s)', (name, companyName, email, message))
+                except Exception as e:
+                    pass
 
-        else:
-            close_old_connections()
-            # cursor.close()
-            print("none posted")
+                return redirect('/')
 
-
-        connections.close_all() 
-        close_old_connections()
-        cursor.close()  
-        return render(request, "pp/index.html",context)
-
-    return render(request, "pp/index.html",context)
+    return render(request, "pp/index.html", context)
 
 
 def pdf_download(request):
