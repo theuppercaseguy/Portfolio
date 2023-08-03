@@ -9,8 +9,9 @@
 
 #more-projects ul{
     list-style: none;
-    margin: 0;
-    padding: 0;
+    max-width: 800px !important;
+    margin: auto;
+    padding: 20px;
 }
 
 .borderss {
@@ -44,6 +45,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
+
 }
 .line-2 {
     position: relative;
@@ -71,13 +73,6 @@
     box-sizing: border-box;
     z-index: 1;
 }
-
-
-
-
-
-
-
 
 
 
