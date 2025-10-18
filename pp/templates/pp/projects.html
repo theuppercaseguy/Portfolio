@@ -344,7 +344,7 @@
         </div>
       </li>
 
-      <li class="list reveal">x
+      <li class="list reveal">
         <div class="project-visual">
           <div class="videowrapper">
             <iframe
@@ -563,12 +563,10 @@
   </ul>
 </span>
 
-
 <div class="btn-container">
   <button id="toggle">Load More</button>
   <span class="line"></span>
 </div>
-
 
 <script>
   $(document).ready(function () {
@@ -576,7 +574,7 @@
       var elem = $("#toggle").text();
       if (elem == "Load More") {
         //Stuff to do when btn is in the read more state
-        $("#toggle").text("Load Less");
+        $("#toggle").text("Collapse");
         $("#more-projects").slideDown();
       } else {
         //Stuff to do when btn is in the read less state

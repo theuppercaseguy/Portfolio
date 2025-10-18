@@ -72,9 +72,8 @@
     /* font-family: cursive; */
     box-sizing: border-box;
     z-index: 1;
+    border-radius: 15px;
 }
-
-
 
 .main-heading {
     color: var(--heading-white);
