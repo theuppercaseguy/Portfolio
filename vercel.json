@@ -20,5 +20,14 @@
     ],
     "env": {
         "DJANGO_SETTINGS_MODULE": "PORTFOLIO.settings"
+    },
+    {
+        "version": 2,
+        "builds": [
+            {
+                "src": "package.json", // as stated here in `vercel.json`
+                "use": "vercel-sapper"
+            }
+        ]
     }
 }
