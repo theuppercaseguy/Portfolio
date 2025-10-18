@@ -22,5 +22,8 @@
             "src": "/(.*)",
             "dest": "PORTFOLIO/wsgi.py"
         }
-    ]
+    ],
+    "env": {
+        "DJANGO_SETTINGS_MODULE": "PORTFOLIO.settings"
+    }
 }
